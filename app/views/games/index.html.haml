@@ -1,0 +1,12 @@
+-#  This file is app/views/index.html.haml
+%h1 All games
+
+%ul
+  - @games.each do |game|
+  %li
+    %link_to game.title, game_path(game)
+    %game.title_ordered
+    %game.date
+    %game.timestamps
+
+= link_to 'Add new game', new_game_path

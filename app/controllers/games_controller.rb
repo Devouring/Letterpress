@@ -2,12 +2,15 @@ class GamesController < ApplicationController
 
   def show
     id = params[:id] # retrieve movie ID from URI route
-    @movie = Movie.find(id) # look up movie by unique ID
+    @game = Game.find(id) # look up movie by unique ID
+   # game.find_words
+    chain = params[:chain] == nil ? "" : params[:chain][:letters]
+    @words = WordFinder.new(@game.title).get_words_list_from_chain(chain).sort_by{|x| x.length}.reverse
     # will render app/views/movies/show.<extension> by default
   end
 
   def index
-    @games = Game.all
+    @games = Game.all.ord
   end
 
   def new
@@ -25,6 +28,7 @@ class GamesController < ApplicationController
   end
 
   def update
+    
     @movie = Movie.find params[:id]
     @movie.update_attributes!(params[:movie])
     flash[:notice] = "#{@movie.title} was successfully updated."
@@ -32,10 +36,11 @@ class GamesController < ApplicationController
   end
 
   def destroy
-    @movie = Movie.find(params[:id])
-    @movie.destroy
-    flash[:notice] = "Movie '#{@movie.title}' deleted."
-    redirect_to movies_path
+    puts "toto"
+    @game = Game.find(params[:id])
+    @game.destroy
+    flash[:notice] = "Game '#{@game.title}' deleted."
+    redirect_to game_path
   end
 
 end

@@ -1,18 +1,7 @@
-class Game < ActiveRecord::Base
-  attr_accessible :title
-  @words =[]
-  def find_words
-    @words = Array.new
-    @words = WordFinder.new("syerootkxmpnbdhrlnmnprhvw" ).get_words_list_from_chain("")
-  end
-end 
-
-
 class WordFinder
   @words_list = []
-  def initialize(letters) 
-    puts letters
-    file_reader('wordsEn.txt')
+  def initialize(letters)
+    file_reader("wordsEn.txt")
     find(letters)
   end
 
@@ -63,7 +52,7 @@ class WordFinder
   def get_words_list_from_chain(chain)
      good_words = Array.new
      @words_list.each do |word|
-      if word.include_chain(chain) then good_words << word end
+      if word.include_chain(subchain) then good_words << word end
     end
     return good_words
   end

@@ -1,0 +1,18 @@
+-#  This file is app/views/index.html.haml
+%h1 #{@game.title}
+
+%h3 "the created_at is #{@game.created_at}"
+%h3 "the updated is #{@game.updated_at}"
+
+= form_tag game_path(@game), :method => :get do
+  = label :chain, :letters, 'letters'
+  = text_field :chain, :letters
+
+  = submit_tag 'Save Changes'
+%ul
+  - @words.each do |word|
+    %li
+      =word
+
+=link_to 'Delete', game_path(@game), :method => :delete
+=link_to 'All games', games_path()

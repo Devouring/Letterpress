@@ -6,7 +6,6 @@ class CreateGames < ActiveRecord::Migration
       t.datetime :date_added
       # Add fields that let Rails automatically keep track
       # of when movies are added or modified:
-      t.timestamps :timestamp
     end
   end
 

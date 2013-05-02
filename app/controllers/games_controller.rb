@@ -10,7 +10,7 @@ class GamesController < ApplicationController
   end
 
   def index
-    @games = Game.all.ord
+    @games = Game.all
   end
 
   def new

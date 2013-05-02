@@ -11,8 +11,7 @@ end
 class WordFinder
   @words_list = []
   def initialize(letters) 
-    puts letters
-    file_reader('wordsEn.txt')
+    file_reader('/wordsEn.txt')
     find(letters)
   end
 
@@ -83,3 +82,4 @@ class String
     return to_be_returned
   end
 end
+

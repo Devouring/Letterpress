@@ -43,12 +43,15 @@ class WordsController < ApplicationController
     redirect_to words_path
   end
 
-  def remove_small
+  def remove_duplicate
     cpt = 0
+    word_hash = Hash.new
     Word.all.each do |word|
-      if word.text.length < 3 then
-      word.destroy
-      cpt += 1
+      if word_hash[word.text.to_sym] == nil
+        word_hash[word.text.to_sym] = 1
+      else
+        word.destroy
+        cpt += 1
       end
     end
     flash[:notice] = "#{cpt} words deleted"

@@ -16,7 +16,7 @@ App::Application.routes.draw do
   resources :words do
     collection do
       post 'generate'
-      post 'remove_small'
+      post 'remove_duplicate'
     end
   end
 

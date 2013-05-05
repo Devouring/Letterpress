@@ -2,7 +2,7 @@
 
 = link_to 'Add a new word', new_word_path
 = link_to 'Generate words', generate_words_path, :method => :post
-= link_to 'Remove small words', remove_small_words_path, :method => :post
+= link_to 'Remove duplicate words', remove_duplicate_words_path, :method => :post
 - if params[:showPrev]
   = link_to "prev", words_path, :offset => params[:offset] - 50
 - if params[:showNext]

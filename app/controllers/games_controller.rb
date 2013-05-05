@@ -6,6 +6,7 @@ class GamesController < ApplicationController
     params[:chain] = params[:chain] == nil ? "" : params[:chain][:letters]
     @words = game.get_words_sorted(params[:chain]) 
     @game = game
+    @games = Game.order("updated_at").reverse
     game.touch
     # will render app/views/movies/show.<extension> by default
   end

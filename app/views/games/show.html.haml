@@ -1,7 +1,15 @@
 -#  This file is app/views/index.html.haml
-%h1 #{@game.title}
+%h1 All games
 
-%h3 "the ordered is #{@game.title_ordered}"
+%ul
+  - @games.each do |game|
+    %li
+      = link_to game.title, game_path(game)
+      = link_to 'Delete', game_path(game), :method => :delete
+
+%h1 #{@game.title}
+= link_to 'Delete', game_path(@game), :method => :delete
+= link_to 'All games', games_path()
 
 = form_tag game_path(@game), :method => :get do
   = label :chain, :letters, 'letters'
@@ -13,5 +21,4 @@
     %li
       = word
 
-= link_to 'Delete', game_path(@game), :method => :delete
-= link_to 'All games', games_path()
+

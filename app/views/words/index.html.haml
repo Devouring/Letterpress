@@ -1,0 +1,17 @@
+%h1 All words
+
+= link_to 'Add a new word', new_word_path
+= link_to 'Generate words', generate_words_path, :method => :post
+- if params[:showPrev]
+  = link_to "prev", words_path, :offset => params[:offset] - 50
+- if params[:showNext]
+  = link_to "next", words_path, :offset => params[:offset] + 50
+%ul
+  -@words.each do |word|
+    %li 
+      = link_to word.text, word_path(word)
+      = link_to 'delete', word_path(word), :method => :delete
+- if params[:showPrev]
+  = link_to "prev", words_path, :offset => params[:offset] - 50
+- if params[:showNext]
+  = link_to "next", words_path, :offset => params[:offset] + 50

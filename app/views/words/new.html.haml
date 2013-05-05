@@ -1,0 +1,7 @@
+%h1 Add a new Word
+
+= form_tag words_path do
+  = label :word, :text, 'Word text'
+  = text_field :word, :text
+  = submit_tag 'Add word'
+

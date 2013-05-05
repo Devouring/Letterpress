@@ -42,6 +42,8 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    foreigner (1.4.1)
+      activerecord (>= 3.0.0)
     haml (4.0.2)
       tilt
     hike (1.2.2)
@@ -59,7 +61,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.23)
     multi_json (1.7.2)
-    pg (0.13.1)
+    pg (0.15.1)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -121,6 +123,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  foreigner
   haml
   jquery-rails
   pg

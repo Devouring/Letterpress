@@ -1,70 +1,40 @@
 class Game < ActiveRecord::Base
+  include ApplicationHelper
   attr_accessible :title
-  @words =[]
-  def find_words
-    @words = Array.new
-    @words = WordFinder.new("syerootkxmpnbdhrlnmnprhvw" ).get_words_list_from_chain("")
-  end
-end 
-
-
-class WordFinder
-  @words_list = []
-  def initialize(letters) 
-    file_reader('/wordsEn.txt')
-    find(letters)
-  end
-
-  def file_reader(filePath)
-    @words_list = Hash.new
-    file = File.new(filePath, "r")
-    while (line = file.gets)
-      @words_list[line.gsub(/\W+/, '').to_sym] = create_hash(line)
-    end
-    file.close
-  end
-
-  #create a letter hash from a word
-  def create_hash(word)
-    word_hash = Hash.new{ |hash, key| hash[key] = 0 }
-    line_array = word.gsub(/\W+/, '').chars.sort.join.split("")
-    line_array.each do |line_letter|
-      word_hash[line_letter.to_sym] = word_hash[line_letter.to_sym] + 1
-    end
-    return word_hash
-  end
-
-  def find(letters)
+  attr_accessible :title_ordered
+  attr_accessible :words
+  has_many :word_game_links
+  has_many :words, :through => :word_game_links
+  def find
     good_words = Array.new
-    letters_hash = create_hash(letters)
-    @words_list.each do |key, word|
-      if contain(letters_hash, word) then good_words << key.to_s end
+    title_hash = generate_hash(self.title)
+    Word.all.each do |word|
+      if contain(title_hash, word.letter_hash) then good_words << word end
     end
-    @words_list = good_words
+    self.words = good_words
   end
 
   def contain(a, b)
-    isContained = true
-    ("a".."z").each do |letter|
-      if a[letter.to_sym] < b[letter.to_sym] then
-      isContained = false
-      break
-      end
+    [:e, :t, :a, :o, :i, :n, :s, :r, :h, :l, :d, :c, :u, :m, :f, :p, :g, :w, :y, :b, :v, :k, :x, :j, :q, :z].each do |letter|
+      if b[letter] != nil and (a[letter] == nil ? 0 : a[letter]) < b[letter] then return false end
     end
-    return isContained
+    return true
   end
 
-  def print(subchain)
+  def from_subchain(subchain)
+    word_from_subchain = Array.new
     @words_list.each do |word|
-      if word.include_chain(subchain) then puts word end
+      if word.text.include_chain(subchain) then word_from_subchain << word end
     end
   end
-  def get_words_list_from_chain(chain)
-     good_words = Array.new
-     @words_list.each do |word|
-      if word.include_chain(chain) then good_words << word end
+
+  def get_words_sorted(subchain)
+    subchain_hash = generate_hash(subchain)
+    word_list = Array.new
+    self.words.each do |word|
+      if contain(word.letter_hash, subchain_hash) then word_list << word.text end
     end
-    return good_words
+    word_list.sort_by{|x| x.length}.reverse
   end
 end
 

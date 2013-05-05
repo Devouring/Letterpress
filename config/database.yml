@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: lettrepress_development
+  database: letterpress_development
   pool: 5
   timeout: 5000
   username: saasbook
@@ -18,7 +18,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: lettrepress_test
+  database: letterpress_test
   pool: 5
   timeout: 5000
   username: saasbook
@@ -27,8 +27,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: lettrepress_production
+  database: letterpress_production
   pool: 5
   timeout: 5000
   username: saasbook
-  password:
+  password: compl1c4ted

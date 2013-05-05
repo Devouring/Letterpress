@@ -12,6 +12,7 @@ gem 'foreigner'
 
 group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
+  gem "seed_dump", "~> 0.4.2"
 end
 # Gems used only for assets and not required
 # in production environments by default.

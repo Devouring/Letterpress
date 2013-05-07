@@ -1,19 +1,22 @@
 -#  This file is app/views/index.html.haml
-%div{:class => "row-fluid"}
-  %div{:class => "span4"}
-    %h2 All games
-    %ul{:class => ""}
-      - @games.each do |game|
-        %li
-          = link_to game.title, game_path(game)
-          = link_to game_path(game), :method => :delete do
-            %i{:class => "icon-remove icon-white"}
-  %div{:class => "span8"}      
-    %h2 Create New Game
-    
-    = form_tag games_path, :class => "form-inline" do
-    
-      = text_field :game, :title, :value => "Letters", :class => "input"
-    
-      = submit_tag "Add", :class => "btn btn-primary"
+
+%div{:class => "span4"}
+  %h2 All games
+  %ul{:class => ""}
+    - @games.each do |game|
+      %li
+        %div{:class => "row-fluid"}
+          %div{:class => "span1"}
+            = link_to game_path(game), :method => :delete do
+              %i{:class => "icon-remove"}
+          %div{:class => "span11"}
+            = link_to game.title, game_path(game)
+%div{:class => "span8"}      
+  %h2 Create New Game
+  
+  = form_tag games_path, :class => "form-inline" do
+  
+    = text_field :game, :title, :value => "Letters", :class => "input"
+  
+    = submit_tag "Add", :class => "btn btn-primary"
 

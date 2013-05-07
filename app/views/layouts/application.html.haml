@@ -7,14 +7,15 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %div{:class => "row-fluid"}
-      %div{:class => "navbar"}
-        %div{:class => "navbar-inner"}
-          %div{:class => "span11 offset1"}
-            = link_to "Letterpress Solver", games_path(), :class => "brand"
-            %ul{:class => "nav"}
-              %li= link_to 'Games', games_path()
-              %li= link_to 'Words', words_path() 
+    %header
+      %div{:class => "row-fluid"}
+        %div{:class => "navbar"}
+          %div{:class => "navbar-inner"}
+            %div{:class => "span11 offset1"}
+              = link_to "Letterpress Solver", games_path(), :class => "brand"
+              %ul{:class => "nav"}
+                %li= link_to 'Games', games_path()
+                %li= link_to 'Words', words_path() 
     
 - if flash[:notice]
   %div{:class => "row-fluid"}

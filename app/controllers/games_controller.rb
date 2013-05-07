@@ -44,5 +44,4 @@ class GamesController < ApplicationController
     flash[:notice] = "Game '#{@game.title}' deleted."
     redirect_to games_path
   end
-
 end

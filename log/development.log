@@ -21833,3 +21833,3409 @@ ActionController::RoutingError (No route matches [GET] "/assets/js/bootstrap.min
 
 Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 22:59:29 +0200
 Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:19:03 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (15.7ms)
+Completed 500 Internal Server Error in 212ms
+
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    17:               %li= link_to 'Words', words_path() 
+    18:     
+    19: - if flash[:notice]
+    20:     %div{:class => "row-fluid"}
+    21:       %div{:class => "span9 offset3"}  
+    22:         #notice.message= flash[:notice]
+    23: - elsif flash[:warning]
+  app/views/layouts/application.html.haml:20
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (33.4ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:19:58 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (3.3ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 72ms (Views: 67.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:19:58 +0200
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:19:58 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (42ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:19:58 +0200
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:19:58 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:19:58 +0200
+Served asset /application.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:19:58 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:19:58 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:19:58 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (3ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:20:01 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (1.7ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:20:01 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:20:01 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:20:01 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:20:01 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:20:01 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:20:01 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:20:01 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:20:02 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/5" for 127.0.0.1 at 2013-05-07 23:20:04 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGame Load (6.4ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "5"]]
+  [1m[36mWord Load (48.5ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 5[0m
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (1.7ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:20:05.184033' WHERE "games"."id" = 5[0m
+  Rendered games/show.html.haml within layouts/application (70.6ms)
+Completed 200 OK in 1020ms (Views: 100.5ms | ActiveRecord: 65.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:20:05 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:20:05 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:20:05 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:20:05 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:20:05 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:20:05 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:20:05 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:20:05 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/5" for 127.0.0.1 at 2013-05-07 23:21:20 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGame Load (2.7ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "5"]]
+  [1m[36mWord Load (48.0ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 5[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (8.3ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:21:21.527150' WHERE "games"."id" = 5[0m
+  Rendered games/show.html.haml within layouts/application (59.2ms)
+Completed 200 OK in 641ms (Views: 75.0ms | ActiveRecord: 59.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:21:21 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:21:21 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:21:21 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:21:21 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:21:21 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (75ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:21:21 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:21:21 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:21:22 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/5" for 127.0.0.1 at 2013-05-07 23:22:33 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGame Load (7.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "5"]]
+  [1m[36mWord Load (53.1ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 5[0m
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (2.6ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:22:34.432602' WHERE "games"."id" = 5[0m
+  Rendered games/show.html.haml within layouts/application (130.1ms)
+Compiled my.css  (0ms)  (pid 20440)
+Compiled application.css  (7ms)  (pid 20440)
+Completed 200 OK in 751ms (Views: 166.2ms | ActiveRecord: 63.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:22:34 +0200
+Served asset /application.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:22:34 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:22:34 +0200
+Served asset /my.css - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:22:34 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:22:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:22:34 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:22:34 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:22:34 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:22:35 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/5" for 127.0.0.1 at 2013-05-07 23:23:17 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGame Load (2.5ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "5"]]
+  [1m[36mWord Load (54.7ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 5[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (2.1ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:23:18.643333' WHERE "games"."id" = 5[0m
+  Rendered games/show.html.haml within layouts/application (71.8ms)
+Completed 200 OK in 809ms (Views: 131.5ms | ActiveRecord: 59.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:23:18 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:23:18 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:23:18 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:23:18 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:23:18 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:23:18 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:23:18 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:23:18 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:23:19 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:27:00 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (2.0ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (18.9ms)
+Completed 200 OK in 40ms (Views: 36.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:27:00 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:27:00 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:27:00 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:27:00 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:27:00 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:27:00 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:27:00 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:27:00 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:27:00 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:27:06 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (6.6ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 21ms (Views: 13.2ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:27:06 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:27:06 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:27:06 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:27:06 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:27:06 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:27:06 +0200
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:27:06 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:27:06 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:27:06 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:28:02 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (7.9ms)
+Compiled application.css  (0ms)  (pid 20440)
+Completed 200 OK in 75ms (Views: 73.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:28:02 +0200
+Served asset /application.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:28:02 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:02 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:28:02 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:02 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:02 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:02 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:28:02 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:28:29 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (16.5ms)
+Completed 200 OK in 37ms (Views: 30.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:28:29 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:29 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:29 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:29 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:28:29 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:28:29 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:29 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:28:30 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:28:42 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:28:42 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:42 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:42 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:42 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:28:42 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:28:42 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:42 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:28:42 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (1.8ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (11.8ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (1.3ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:28:43 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:28:44 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:31:55 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:31:55 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:31:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:31:55 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:31:55 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:31:55 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:31:55 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:31:55 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:31:55 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:31:56 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (2.8ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 16ms (Views: 11.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:31:56 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:31:56 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:31:56 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:31:56 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:31:56 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:31:56 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:31:56 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:31:56 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:32:42 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:32:42 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:32:42 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:32:42 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:32:42 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:32:42 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:32:42 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:32:42 +0200
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:32:42 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:35:02 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (2.3ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (2.0ms)
+Compiled application.css  (7ms)  (pid 20440)
+Completed 200 OK in 76ms (Views: 72.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:35:02 +0200
+Served asset /application.css - 304 Not Modified (36ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:35:02 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:35:02 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:35:02 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:35:02 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:35:02 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:35:02 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:35:02 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:35:02 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:35:03 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (3.4ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 14.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:35:03 +0200
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:35:03 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:35:03 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:35:03 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:35:03 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:35:03 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:35:03 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:35:03 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:35:03 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:37:14 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (4.0ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (21.5ms)
+Completed 200 OK in 41ms (Views: 36.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:37:14 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:37:14 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:37:14 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:37:14 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:37:14 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:37:14 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:37:14 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:37:14 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:37:14 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:37:15 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (1.7ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:37:15 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:37:15 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:37:15 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:37:15 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:37:15 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:37:15 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:37:15 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:37:15 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:37:15 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:37:16 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (1.1ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:37:16 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:37:16 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:37:16 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:37:16 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:37:16 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:37:16 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:37:16 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:37:16 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:37:16 +0200
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:37:59 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (1.6ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (2.0ms)
+Compiled bootstrap.min.css  (1ms)  (pid 20440)
+Compiled application.css  (2ms)  (pid 20440)
+Completed 200 OK in 130ms (Views: 126.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:37:59 +0200
+Served asset /application.css - 304 Not Modified (33ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:37:59 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:37:59 +0200
+Served asset /bootstrap.min.css - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:37:59 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:37:59 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:37:59 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:37:59 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:37:59 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/assets/images/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:37:59 +0200
+Served asset /assets/images/glyphicons-halflings-white.png - 404 Not Found (12ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/images/glyphicons-halflings-white.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:38:21 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (13.4ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:21 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:21 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:21 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:21 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:21 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:21 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:21 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:21 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/assets/images/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:38:21 +0200
+Served asset /assets/images/glyphicons-halflings.png - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/images/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:38:22 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:22 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:22 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:22 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:22 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:22 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:22 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:22 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:22 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/assets/images/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:38:23 +0200
+Served asset /assets/images/glyphicons-halflings.png - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/images/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:38:26 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:26 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:26 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:26 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:26 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:26 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:26 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:26 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:26 +0200
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/assets/images/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:38:26 +0200
+Served asset /assets/images/glyphicons-halflings.png - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/images/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:38:27 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (3.7ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 21ms (Views: 15.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:27 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:27 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:27 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:27 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:27 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:27 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:27 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:27 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/assets/images/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:38:28 +0200
+Served asset /assets/images/glyphicons-halflings.png - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/images/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:38:49 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (4.6ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 23ms (Views: 16.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:50 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:50 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:50 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:50 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:50 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:50 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:50 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:50 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/assets/images/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:38:50 +0200
+Served asset /assets/images/glyphicons-halflings.png - 404 Not Found (42ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/images/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:38:51 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:51 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:51 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:51 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:51 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:51 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:51 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:51 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:51 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/assets/images/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:38:51 +0200
+Served asset /assets/images/glyphicons-halflings.png - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/images/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:38:52 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (0.7ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:52 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:52 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:52 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:52 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:52 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:52 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:52 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:52 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/assets/images/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:38:52 +0200
+Served asset /assets/images/glyphicons-halflings.png - 404 Not Found (12ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/images/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/games/5" for 127.0.0.1 at 2013-05-07 23:38:54 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (3.5ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mWord Load (67.9ms)[0m  SELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 5
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  [1m[35mSQL (11.8ms)[0m  UPDATE "games" SET "updated_at" = '2013-05-07 21:38:54.814902' WHERE "games"."id" = 5
+  Rendered games/show.html.haml within layouts/application (63.1ms)
+Completed 200 OK in 783ms (Views: 74.0ms | ActiveRecord: 83.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:54 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:54 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:54 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:55 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:55 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:55 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:55 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/assets/images/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:38:55 +0200
+Served asset /assets/images/glyphicons-halflings-white.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/images/glyphicons-halflings-white.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/games/5" for 127.0.0.1 at 2013-05-07 23:38:56 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (3.6ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mWord Load (39.8ms)[0m  SELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 5
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  [1m[35mSQL (2.1ms)[0m  UPDATE "games" SET "updated_at" = '2013-05-07 21:38:57.276242' WHERE "games"."id" = 5
+  Rendered games/show.html.haml within layouts/application (70.1ms)
+Completed 200 OK in 759ms (Views: 98.8ms | ActiveRecord: 45.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:57 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:57 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:57 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:57 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:57 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:38:57 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:57 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:38:57 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/assets/images/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-05-07 23:38:58 +0200
+Served asset /assets/images/glyphicons-halflings-white.png - 404 Not Found (101ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/images/glyphicons-halflings-white.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/games/5" for 127.0.0.1 at 2013-05-07 23:39:05 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mWord Load (69.4ms)[0m  SELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 5
+  [1m[36mGame Load (2.2ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  [1m[35mSQL (3.3ms)[0m  UPDATE "games" SET "updated_at" = '2013-05-07 21:39:06.124338' WHERE "games"."id" = 5
+  Rendered games/show.html.haml within layouts/application (112.8ms)
+Completed 200 OK in 952ms (Views: 182.7ms | ActiveRecord: 75.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:39:06 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:39:06 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:39:06 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:39:06 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:39:06 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:39:06 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:39:06 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:39:06 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/assets/images/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:39:06 +0200
+Served asset /assets/images/glyphicons-halflings.png - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/images/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:39:51 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (3.6ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 18ms (Views: 13.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:39:51 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:39:51 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:39:51 +0200
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:39:51 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:39:51 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:39:51 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:39:51 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:39:51 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/assets/images/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:39:51 +0200
+Served asset /assets/images/glyphicons-halflings.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/images/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:40:47 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (4.3ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (10.2ms)
+Compiled bootstrap.min.css  (0ms)  (pid 20440)
+Compiled application.css  (1ms)  (pid 20440)
+Completed 200 OK in 96ms (Views: 90.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:40:47 +0200
+Served asset /application.css - 304 Not Modified (35ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:40:47 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:40:47 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:40:47 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:40:47 +0200
+Served asset /bootstrap.min.css - 200 OK (11ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:40:47 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:40:47 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:40:47 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/assets/images/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:40:47 +0200
+Served asset /assets/images/glyphicons-halflings.png - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/images/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/assets/images/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:41:08 +0200
+Served asset /assets/images/glyphicons-halflings.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/images/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (7.3ms)
+
+
+Started GET "/assets/assets/images/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:41:30 +0200
+Served asset /assets/images/glyphicons-halflings.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/assets/images/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:42:02 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (6.7ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (1.9ms)
+Compiled bootstrap.min.css  (0ms)  (pid 20440)
+Compiled application.css  (1ms)  (pid 20440)
+Completed 200 OK in 139ms (Views: 130.5ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:42:02 +0200
+Served asset /application.css - 304 Not Modified (37ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:42:02 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:42:02 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:42:02 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:42:02 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:42:02 +0200
+Served asset /bootstrap.min.css - 200 OK (5ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:42:02 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:42:02 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:42:03 +0200
+Served asset /images/glyphicons-halflings.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:42:05 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (3.7ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 16.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:42:05 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:42:05 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:42:05 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:42:05 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:42:05 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:42:05 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:42:05 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:42:05 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:42:05 +0200
+Served asset /images/glyphicons-halflings.png - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:42:06 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (2.4ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 19ms (Views: 14.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:42:06 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:42:06 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:42:06 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:42:06 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:42:06 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:42:06 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:42:06 +0200
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:42:06 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:42:06 +0200
+Served asset /images/glyphicons-halflings.png - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/images/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:42:07 +0200
+Served asset /images/glyphicons-halflings.png - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/glyphicons-halflings.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/debugger.rb:20:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:42:40 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (4.5ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (8.4ms)
+Compiled bootstrap.min.css  (0ms)  (pid 20440)
+Compiled application.css  (1ms)  (pid 20440)
+Completed 200 OK in 116ms (Views: 110.6ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:42:40 +0200
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:42:40 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:42:40 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:42:40 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:42:40 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:42:40 +0200
+Served asset /bootstrap.min.css - 200 OK (18ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:42:40 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:42:40 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:42:41 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (1ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:43:25 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (1.6ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:43:25 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:43:25 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:43:25 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:43:25 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:43:25 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:43:25 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:43:25 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:43:25 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:43:26 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:44:42 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (4.4ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 70ms (Views: 64.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:44:42 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:44:43 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:44:43 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:44:43 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:44:43 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:44:43 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:44:43 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:44:43 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:44:43 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/5" for 127.0.0.1 at 2013-05-07 23:44:45 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mWord Load (32.3ms)[0m  SELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 5
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  [1m[35mSQL (1.4ms)[0m  UPDATE "games" SET "updated_at" = '2013-05-07 21:44:45.672417' WHERE "games"."id" = 5
+  Rendered games/show.html.haml within layouts/application (125.9ms)
+Completed 200 OK in 738ms (Views: 141.9ms | ActiveRecord: 34.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:44:45 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:44:45 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:44:45 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:44:45 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:44:45 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:44:45 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:44:45 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:44:45 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:44:46 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/5" for 127.0.0.1 at 2013-05-07 23:45:08 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (2.5ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mWord Load (84.2ms)[0m  SELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 5
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  [1m[35mSQL (1.5ms)[0m  UPDATE "games" SET "updated_at" = '2013-05-07 21:45:09.003233' WHERE "games"."id" = 5
+  Rendered games/show.html.haml within layouts/application (150.6ms)
+Completed 200 OK in 764ms (Views: 164.3ms | ActiveRecord: 88.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:45:09 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:45:09 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:45:09 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:45:09 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:45:09 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:45:09 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:45:09 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:45:09 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:45:09 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:47:19 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:47:19 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:47:19 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:47:19 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:47:19 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:47:19 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:47:19 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:47:19 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:47:19 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:47:19 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:48:26 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (1.5ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:48:26 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:48:26 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:48:27 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:48:27 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:48:27 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:48:27 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:48:27 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:48:27 +0200
+Served asset /application.js - 304 Not Modified (69ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:48:27 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/games/5" for 127.0.0.1 at 2013-05-07 23:48:40 +0200
+Processing by GamesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Rf9sjoNzautCfX8ltVxlUkICklFcUqIKM6D8TVAlv4o=", "id"=>"5"}
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "games" WHERE "games"."id" = $1[0m  [["id", 5]]
+  [1m[35m (14.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/games
+Completed 302 Found in 18ms (ActiveRecord: 14.7ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:48:41 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (1.0ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:48:41 +0200
+Served asset /application.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:48:41 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:48:41 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:48:41 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:48:41 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:48:41 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:48:41 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:48:41 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:50:05 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (5.1ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 18ms (Views: 11.8ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:50:06 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:50:06 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:50:06 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:50:06 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:50:06 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:50:06 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:50:06 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:50:06 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2013-05-07 23:50:10 +0200
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rf9sjoNzautCfX8ltVxlUkICklFcUqIKM6D8TVAlv4o=", "game"=>{"title"=>"testLetters"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (122.0ms)[0m  INSERT INTO "games" ("created_at", "title", "title_ordered", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Tue, 07 May 2013 21:50:10 UTC +00:00], ["title", "testLetters"], ["title_ordered", "Leeersstttt"], ["updated_at", Tue, 07 May 2013 21:50:10 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mWord Load (595.1ms)[0m  SELECT "words".* FROM "words" 
+  [1m[36mEXPLAIN (8.9ms)[0m  [1mEXPLAIN SELECT "words".* FROM "words" [0m
+EXPLAIN for: SELECT "words".* FROM "words" 
+                          QUERY PLAN
+--------------------------------------------------------------
+ Seq Scan on words  (cost=0.00..2534.66 rows=109366 width=76)
+(1 row)
+
+  [1m[35mWord Load (1.5ms)[0m  SELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (22.4ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 32503]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 32616]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 32724]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 32769]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 32778]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 32804]]
+  [1m[35mSQL (3.5ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 32805]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 80824]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 80864]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 80865]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 81084]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 81190]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 81266]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 81324]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 81327]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 83012]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 85594]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 85654]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 85657]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 85659]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 86236]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 86255]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 86256]]
+  [1m[36mSQL (36.4ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 86395]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 86401]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 86412]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 86415]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 86416]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 86417]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 86418]]
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 92139]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 92147]]
+  [1m[35mSQL (3.3ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 92230]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 92261]]
+  [1m[35mSQL (3.5ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 92293]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 92301]]
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 92922]]
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 92926]]
+  [1m[35mSQL (8.0ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 96400]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 96431]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 96432]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 96435]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 96933]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 96937]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 96952]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 96969]]
+  [1m[35mSQL (4.6ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 96970]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 96971]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 96972]]
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 96973]]
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 96995]]
+  [1m[36mSQL (5.3ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 99586]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 99590]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 99667]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"  [["game_id", 7], ["word_id", 99675]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "word_game_links" ("game_id", "word_id") VALUES ($1, $2) RETURNING "id"[0m  [["game_id", 7], ["word_id", 100330]]
+  [1m[35m (18.6ms)[0m  COMMIT
+  [1m[36m (2.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (6.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/games
+Completed 302 Found in 28152ms (ActiveRecord: 862.8ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:50:38 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (4.1ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 28ms (Views: 22.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:50:38 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:50:38 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:50:38 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:50:38 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:50:38 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:50:38 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:50:38 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:50:38 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:50:38 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/7" for 127.0.0.1 at 2013-05-07 23:50:50 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mWord Load (2.2ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (21.0ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:50:50.626914' WHERE "games"."id" = 7[0m
+  Rendered games/show.html.haml within layouts/application (21.3ms)
+Completed 200 OK in 79ms (Views: 27.2ms | ActiveRecord: 23.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:50:50 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:50:50 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:50:50 +0200
+Served asset /jquery.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:50:50 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:50:50 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:50:50 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:50:50 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:50:50 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:50:51 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/7" for 127.0.0.1 at 2013-05-07 23:53:03 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGame Load (2.4ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mWord Load (4.9ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7[0m
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (4.0ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:53:03.420854' WHERE "games"."id" = 7[0m
+  Rendered games/show.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 48ms (Views: 17.1ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:53:03 +0200
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:53:03 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:53:03 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:53:03 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:53:03 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:53:03 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:53:03 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:53:03 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:53:03 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/7" for 127.0.0.1 at 2013-05-07 23:53:43 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGame Load (2.4ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mWord Load (1.6ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (5.8ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:53:43.504476' WHERE "games"."id" = 7[0m
+  Rendered games/show.html.haml within layouts/application (201.6ms)
+Completed 200 OK in 242ms (Views: 209.1ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:53:43 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:53:43 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:53:43 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:53:43 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:53:43 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:53:43 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:53:43 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:53:43 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:53:44 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/7" for 127.0.0.1 at 2013-05-07 23:53:56 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mWord Load (1.6ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7[0m
+  [1m[35mGame Load (1.1ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (36.3ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:53:56.451972' WHERE "games"."id" = 7[0m
+  Rendered games/show.html.haml within layouts/application (12.0ms)
+Completed 200 OK in 80ms (Views: 18.4ms | ActiveRecord: 39.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:53:56 +0200
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:53:56 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:53:56 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:53:56 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:53:56 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:53:56 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:53:56 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:53:56 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:53:56 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/7" for 127.0.0.1 at 2013-05-07 23:55:03 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mWord Load (3.4ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (5.5ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:55:03.188963' WHERE "games"."id" = 7[0m
+  Rendered games/show.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 71ms (Views: 40.4ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:55:03 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:55:03 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:55:03 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:55:03 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:55:03 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:55:03 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:55:03 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:55:03 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:55:03 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/7" for 127.0.0.1 at 2013-05-07 23:55:14 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGame Load (3.8ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mWord Load (2.4ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7[0m
+  [1m[35mGame Load (0.6ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (3.5ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:55:14.110584' WHERE "games"."id" = 7[0m
+  Rendered games/show.html.haml within layouts/application (10.9ms)
+Completed 200 OK in 49ms (Views: 17.3ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:55:14 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:55:14 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:55:14 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:55:14 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:55:14 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:55:14 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:55:14 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:55:14 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:55:14 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/7" for 127.0.0.1 at 2013-05-07 23:56:11 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGame Load (0.9ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mWord Load (3.2ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (2.1ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:56:12.002608' WHERE "games"."id" = 7[0m
+  Rendered games/show.html.haml within layouts/application (12.8ms)
+Completed 500 Internal Server Error in 46ms
+
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    18:     %div{:class => "span6"}
+    19:       %h2 #{@game.title}
+    20:     %div{:class => "span6"}
+    21:         = link_to 'Delete game', game_path(@game), :method => :delete
+    22:   %div{:class => "span8"}
+    23:     = form_tag game_path(@game), :method => :get, :class => "form-inline" do
+    24:       = text_field :chain, :letters, :value => params[:chain]== nil ? "Letters to keep" : params[:chain]
+  app/views/games/show.html.haml:21
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/games/7" for 127.0.0.1 at 2013-05-07 23:56:24 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGame Load (0.9ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mWord Load (1.5ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7[0m
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (2.5ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:56:24.579758' WHERE "games"."id" = 7[0m
+  Rendered games/show.html.haml within layouts/application (21.3ms)
+Completed 200 OK in 66ms (Views: 32.2ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:56:24 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:56:24 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:56:24 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:56:24 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:56:24 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:56:24 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:56:24 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:56:24 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:56:25 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/7" for 127.0.0.1 at 2013-05-07 23:57:30 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGame Load (6.1ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mWord Load (2.3ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7[0m
+  [1m[35mGame Load (1.5ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (6.6ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:57:30.319439' WHERE "games"."id" = 7[0m
+  Rendered games/show.html.haml within layouts/application (22.2ms)
+Completed 200 OK in 66ms (Views: 30.4ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:57:30 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:57:30 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:57:30 +0200
+Served asset /my.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:57:30 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:57:30 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:57:30 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:57:30 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:57:30 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:57:30 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/7" for 127.0.0.1 at 2013-05-07 23:57:41 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGame Load (5.5ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mWord Load (1.6ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (34.6ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:57:41.360860' WHERE "games"."id" = 7[0m
+  Rendered games/show.html.haml within layouts/application (58.4ms)
+Completed 200 OK in 142ms (Views: 68.2ms | ActiveRecord: 41.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:57:41 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:57:41 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:57:41 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:57:41 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:57:41 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:57:41 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:57:41 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:57:41 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:57:41 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/7" for 127.0.0.1 at 2013-05-07 23:58:03 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mWord Load (5.8ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7[0m
+  [1m[35mGame Load (8.1ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (5.9ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:58:03.540265' WHERE "games"."id" = 7[0m
+  Rendered games/show.html.haml within layouts/application (24.9ms)
+Completed 200 OK in 78ms (Views: 32.0ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:58:03 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:58:03 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:58:03 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:58:03 +0200
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:58:03 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:58:03 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:58:03 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:58:03 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:58:03 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/7" for 127.0.0.1 at 2013-05-07 23:58:34 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGame Load (4.8ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mWord Load (6.4ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (2.1ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:58:34.765516' WHERE "games"."id" = 7[0m
+  Rendered games/show.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 48ms (Views: 16.7ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:58:34 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:58:34 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:58:34 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:58:34 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:58:34 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:58:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:58:34 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:58:34 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:58:35 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/7" for 127.0.0.1 at 2013-05-07 23:58:39 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGame Load (2.6ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mWord Load (2.4ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (4.0ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:58:39.922692' WHERE "games"."id" = 7[0m
+  Rendered games/show.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 36ms (Views: 11.4ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:58:39 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:58:40 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:58:40 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:58:40 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:58:40 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:58:40 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:58:40 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:58:40 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:58:40 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/7" for 127.0.0.1 at 2013-05-07 23:59:03 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mWord Load (1.1ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (1.9ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:59:03.068620' WHERE "games"."id" = 7[0m
+  Rendered games/show.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 42ms (Views: 15.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:59:03 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:59:03 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:59:03 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:59:03 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:59:03 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:59:03 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:59:03 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:59:03 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:59:03 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/7" for 127.0.0.1 at 2013-05-07 23:59:18 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGame Load (8.5ms)[0m  SELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mWord Load (5.6ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7[0m
+  [1m[35mGame Load (0.5ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "games" SET "updated_at" = '2013-05-07 21:59:18.602785' WHERE "games"."id" = 7[0m
+  Rendered games/show.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 58ms (Views: 21.8ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:59:18 +0200
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:59:18 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:59:18 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:59:18 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:59:18 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:59:18 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:59:18 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:59:18 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:59:18 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-07 23:59:40 +0200
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (5.3ms)[0m  SELECT "games".* FROM "games" ORDER BY updated_at
+  Rendered games/index.html.haml within layouts/application (14.1ms)
+Completed 200 OK in 31ms (Views: 24.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:59:40 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:59:40 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:59:40 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:59:40 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:59:40 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:59:40 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:59:40 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:59:40 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:59:41 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/games/7" for 127.0.0.1 at 2013-05-07 23:59:46 +0200
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGame Load (0.9ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."id" = $1 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mWord Load (1.6ms)[0m  SELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 7
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  [1m[35mSQL (2.4ms)[0m  UPDATE "games" SET "updated_at" = '2013-05-07 21:59:46.925837' WHERE "games"."id" = 7
+  Rendered games/show.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 47ms (Views: 14.4ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-07 23:59:47 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:59:47 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-07 23:59:47 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-07 23:59:47 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-05-07 23:59:47 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-07 23:59:47 +0200
+Served asset /my.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-07 23:59:47 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-07 23:59:47 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-05-07 23:59:47 +0200
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)

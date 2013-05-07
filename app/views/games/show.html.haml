@@ -1,28 +1,35 @@
 -#  This file is app/views/index.html.haml
-%div{:class => "row-fluid"}
-  %div{:class => "span4"}
-    %h2 All games
-  
-    %ul
-      - @games.each do |game|
-        %li
-          = link_to game.title, game_path(game)
-          = link_to game_path(game), :method => :delete do
-            %i{:class => "icon-remove icon-white"}
+%div{:class => "span4"}
+  %h2 All games
 
-  %div{:class => "span8"}
-    %h2 #{@game.title}
-    
-    %div{:class => "span8"}
-      = form_tag game_path(@game), :method => :get, :class => "form-inline" do
-        = text_field :chain, :letters, :value => params[:chain]== nil ? "Letters to keep" : params[:chain]
-        = submit_tag 'Sort', :class => "btn btn-primary"
-    %div{:class => "span8"}
+  %ul
+    - @games.each do |game|
+      %li
+        %div{:class => "row-fluid"}
+          %div{:class => "span1"}
+            = link_to game_path(game), :method => :delete do
+              %i{:class => "icon-remove"}
+          %div{:class => "span11"}
+            = link_to game.title, game_path(game)
+          
+
+%div{:class => "span8"}
+  %div{:class => "row"}
+    %div{:class => "span4"}
+      %h2 #{@game.title}
+    %div{:class => "span4"}
       = link_to 'Delete game', game_path(@game), :method => :delete
-    %div{:class => "span8"}  
-      %ul
-        - @words.each do |word|
-          %li
-            = word
+      %br
+      = link_to 'New game', games_path
+  %div{:class => "span8"}
+    = form_tag game_path(@game), :method => :get, :class => "form-inline" do
+      = text_field :chain, :letters, :value => params[:chain]== nil ? "Letters to keep" : params[:chain]
+      = submit_tag 'Sort', :class => "btn btn-primary"
+  
+  %div{:class => "span8"}  
+    %ul
+      - @words.each do |word|
+        %li
+          = word
 
 

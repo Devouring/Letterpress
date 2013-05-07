@@ -3,11 +3,11 @@ class GamesController < ApplicationController
     id = params[:id] # retrieve movie ID from URI route
     game = Game.find(params[:id]) # look up movie by unique ID
    # game.find_words
-    params[:chain] = params[:chain] == nil ? "" : params[:chain][:letters]
     @words = game.get_words_sorted(params[:chain]) 
     @game = game
     @games = Game.order("updated_at").reverse
     game.touch
+    params[:chain] = params[:chain] == nil ? "Letters to keep" : params[:chain][:letters]
     # will render app/views/movies/show.<extension> by default
   end
 

@@ -9,7 +9,6 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 gem 'foreigner'
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem "seed_dump", "~> 0.4.2"

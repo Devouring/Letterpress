@@ -1,35 +1,57 @@
 -#  This file is app/views/index.html.haml
-%div{:class => "span4"}
-  %h2 All games
+/
+  .bs-docs-grid
+    .row-fluid.show-grid
+      .span4 
+        4 
+      .span4.offset4
+        4 offset 4 
+    .row-fluid.show-grid 
+      .span3.offset3
+        3 offset 3 
+      .span3.offset3
+        3 offset 3 
+    .row-fluid.show-grid 
+      .span6.offset6
+        6 offset 6 
 
-  %ul
-    - @games.each do |game|
-      %li
-        %div{:class => "row-fluid"}
-          %div{:class => "span1"}
-            = link_to game_path(game), :method => :delete do
-              %i{:class => "icon-remove"}
-          %div{:class => "span11"}
-            = link_to game.title, game_path(game)
-          
 
-%div{:class => "span8"}
-  %div{:class => "row"}
-    %div{:class => "span4"}
-      %h2 #{@game.title}
-    %div{:class => "span4"}
-      = link_to 'Delete game', game_path(@game), :method => :delete
-      %br
-      = link_to 'New game', games_path
-  %div{:class => "span8"}
-    = form_tag game_path(@game), :method => :get, :class => "form-inline" do
-      = text_field :chain, :letters, :value => params[:chain]== nil ? "Letters to keep" : params[:chain]
-      = submit_tag 'Sort', :class => "btn btn-primary"
-  
-  %div{:class => "span8"}  
-    %ul
-      - @words.each do |word|
-        %li
-          = word
+.bs-docs-grid
+  .row
+    .span4
+      %h2 All games
+    
+      %ul
+        - @games.each do |game|
+          %li
+            .row-fluid
+              .span1
+                = link_to game_path(game), :method => :delete do
+                  %i{:class => "icon-remove"}
+              .span11
+                = link_to game.title, game_path(game)
+              
+    .span8
+      .row
+        .span8
+          .row
+            .span4
+              %h2 #{@game.title}
+            .span4
+              = link_to 'Delete game', game_path(@game), :method => :delete
+              %br
+              = link_to 'New game', games_path
+      .row
+        .span8
+          = form_tag game_path(@game), :method => :get, :class => "form-inline" do
+            = text_field :chain, :letters, :value => params[:chain] 
+            = submit_tag 'Sort', :class => "btn btn-primary"
+      .row
+        .span8
+          %ul
+            - @words.each do |word|
+              %li
+                = word
+
 
 

@@ -16,7 +16,7 @@
         6 offset 6 
 
 
-.bs-docs-grid
+%article
   .row
     .span4
       %h2 All games
@@ -31,27 +31,32 @@
               .span11
                 = link_to game.title, game_path(game)
               
-    .span8
-      .row
-        .span8
-          .row
-            .span4
-              %h2 #{@game.title}
-            .span4
-              = link_to 'Delete game', game_path(@game), :method => :delete
-              %br
-              = link_to 'New game', games_path
-      .row
-        .span8
-          = form_tag game_path(@game), :method => :get, :class => "form-inline" do
-            = text_field :chain, :letters, :value => params[:chain] 
-            = submit_tag 'Sort', :class => "btn btn-primary"
-      .row
-        .span8
-          %ul
-            - @words.each do |word|
-              %li
+    .span5
+      %h2 #{@game.title}    
+
+    .span2
+      = link_to 'Delete game', game_path(@game), :method => :delete
+      %br
+      = link_to 'New game', games_path 
+  
+              
+  .row
+    .span5.offset4
+      = form_tag game_path(@game), :method => :get, :class => "form-inline" do
+        = text_field :chain, :letters, :value => params[:chain], :autofocus => true, :placeholder => "Letters to keep" 
+        = submit_tag 'Sort', :class => "btn btn-primary"
+  .row
+    .span5.offset4
+      .accordion#accordion-words
+        - cpt = 0
+        - @words.each do |word|
+          -cpt += 1
+          .accordion-group
+            .accordion-heading
+              %a{:class => "accordion-toggle", :data => {:toggle => "collapse",:parent => "accordion-words"}, :href => "#collapse#{cpt}"}
                 = word
-
-
+            %div{:class => "accordion-body collapse", :id => "collapse#{cpt}"}
+              .accordion-inner
+                %h3
+                  = word
 

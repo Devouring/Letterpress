@@ -21,7 +21,7 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.create!(:title => params[:game][:title].downcase!, :title_ordered => params[:game][:title].chars.sort.join.downcase!)
+    @game = Game.create!(:title => params[:game][:title].downcase, :title_ordered => params[:game][:title].chars.sort.join.downcase)
     @game.find
     @game.save
     flash[:notice] = "#{@game.title} was successfully created."

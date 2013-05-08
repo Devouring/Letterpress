@@ -44,7 +44,7 @@
                 .input-prepend.controls.controls-row               
                   %span{:class => "add-on"}
                     ="-"
-                  = text_field :chain, :chain_to_remove, :value => params[:chain_to_remove], :autofocus => true, :placeholder => "Unwanted letters", :class=> "input-large"
+                  = text_field :chain, :chain_to_remove, :value => params[:chain_to_remove], :placeholder => "Unwanted letters", :class=> "input-large"
             .row-fluid
               .span6
                 = submit_tag 'Sort', :class => "btn btn-large btn-primary"

@@ -25,7 +25,7 @@ class GamesController < ApplicationController
     @game.find
     @game.save
     flash[:notice] = "#{@game.title} was successfully created."
-    redirect_to movie_path(@game)
+    redirect_to game_path(@game)
   end
 
   def edit

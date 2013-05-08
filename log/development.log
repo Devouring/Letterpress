@@ -38148,3 +38148,73 @@ Served asset /application.css - 304 Not Modified (0ms)
 
 Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-09 00:04:24 +0200
 Served asset /my.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/games" for 127.0.0.1 at 2013-05-09 00:20:30 +0200
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games" ORDER BY updated_at[0m
+  Rendered games/index.html.haml within layouts/application (32.1ms)
+Completed 200 OK in 170ms (Views: 72.1ms | ActiveRecord: 33.8ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-05-09 00:20:30 +0200
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-09 00:20:30 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 00:20:30 +0200
+Served asset /application.css - 304 Not Modified (45ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-05-09 00:20:30 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-05-09 00:20:30 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-09 00:20:30 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/my.css?body=1" for 127.0.0.1 at 2013-05-09 00:20:30 +0200
+Served asset /my.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-09 00:20:30 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2013-05-09 00:20:34 +0200
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rf9sjoNzautCfX8ltVxlUkICklFcUqIKM6D8TVAlv4o=", "game"=>{"title"=>"test"}, "commit"=>"Add"}
+  [1m[35m (3.0ms)[0m  BEGIN
+  [1m[36mSQL (70.3ms)[0m  [1mINSERT INTO "games" ("created_at", "title", "title_ordered", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Wed, 08 May 2013 22:20:34 UTC +00:00], ["title", nil], ["title_ordered", nil], ["updated_at", Wed, 08 May 2013 22:20:34 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36mWord Load (515.5ms)[0m  [1mSELECT "words".* FROM "words" [0m
+  [1m[35mEXPLAIN (0.8ms)[0m  EXPLAIN SELECT "words".* FROM "words" 
+EXPLAIN for: SELECT "words".* FROM "words" 
+                          QUERY PLAN
+--------------------------------------------------------------
+ Seq Scan on words  (cost=0.00..2534.66 rows=109366 width=76)
+(1 row)
+
+  [1m[36mWord Load (1.3ms)[0m  [1mSELECT "words".* FROM "words" INNER JOIN "word_game_links" ON "words"."id" = "word_game_links"."word_id" WHERE "word_game_links"."game_id" = 8[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 13204ms
+
+NoMethodError (undefined method `movie_path' for #<GamesController:0xb40107c>):
+  app/controllers/games_controller.rb:28:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)

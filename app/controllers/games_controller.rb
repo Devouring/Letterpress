@@ -3,7 +3,7 @@ class GamesController < ApplicationController
     id = params[:id] # retrieve movie ID from URI route
     game = Game.find(params[:id]) # look up movie by unique ID
    # game.find_words
-    params[:chain_to_keep] = params[:chain] == nil ? "" : params[:chain][:chain_to_keep].downcase!
+    params[:chain_to_keep] = params[:chain] == nil ? "" : params[:chain][:chain_to_keep].downcases
     @words = game.get_words_sorted(params[:chain_to_keep]) 
     @game = game
     @games = Game.order("updated_at").reverse

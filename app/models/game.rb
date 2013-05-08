@@ -3,6 +3,8 @@ class Game < ActiveRecord::Base
   attr_accessible :title
   attr_accessible :title_ordered
   attr_accessible :words
+  attr_accessible :word_game_links
+
   has_many :word_game_links
   has_many :words, :through => :word_game_links
   def find
@@ -28,11 +30,21 @@ class Game < ActiveRecord::Base
     end
   end
 
+  def get_words_played_sorted
+    word_list = Array.new
+    self.word_game_links.each do |link_word|
+      if link_word.played then word_list << link_word.word.text end
+    end
+    word_list.sort_by{|x| x.length}.reverse
+  end
+
   def get_words_sorted(subchain)
     subchain_hash = generate_hash(subchain)
     word_list = Array.new
-    self.words.each do |word|
-      if contain(word.letter_hash, subchain_hash) then word_list << word.text end
+    self.word_game_links.each do |link_word|
+      if not link_word.played then
+        if contain(link_word.word.letter_hash, subchain_hash) then word_list << link_word.word.text end
+      end
     end
     word_list.sort_by{|x| x.length}.reverse
   end

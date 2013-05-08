@@ -1,21 +1,4 @@
 -#  This file is app/views/index.html.haml
-/
-  .bs-docs-grid
-    .row-fluid.show-grid
-      .span4 
-        4 
-      .span4.offset4
-        4 offset 4 
-    .row-fluid.show-grid 
-      .span3.offset3
-        3 offset 3 
-      .span3.offset3
-        3 offset 3 
-    .row-fluid.show-grid 
-      .span6.offset6
-        6 offset 6 
-
-
 %article
   .row
     .span4
@@ -30,33 +13,75 @@
                   %i{:class => "icon-remove"}
               .span11
                 = link_to game.title, game_path(game)
-              
-    .span5
-      %h2 #{@game.title}    
-
-    .span2
-      = link_to 'Delete game', game_path(@game), :method => :delete
-      %br
-      = link_to 'New game', games_path 
-  
-              
-  .row
-    .span5.offset4
-      = form_tag game_path(@game), :method => :get, :class => "form-inline" do
-        = text_field :chain, :letters, :value => params[:chain], :autofocus => true, :placeholder => "Letters to keep" 
-        = submit_tag 'Sort', :class => "btn btn-primary"
-  .row
-    .span5.offset4
-      .accordion#accordion-words
-        - cpt = 0
-        - @words.each do |word|
-          -cpt += 1
-          .accordion-group
-            .accordion-heading
-              %a{:class => "accordion-toggle", :data => {:toggle => "collapse",:parent => "accordion-words"}, :href => "#collapse#{cpt}"}
-                = word
-            %div{:class => "accordion-body collapse", :id => "collapse#{cpt}"}
-              .accordion-inner
-                %h3
-                  = word
-
+    .span4
+      .row-fluid        
+        .span7
+          %h2
+            -cpt = 0 
+            -@game.title.chars.each do |letter|
+              -if cpt == 4 then
+                -cpt = 0
+                %br
+              -cpt += 1
+              = letter 
+    
+        .span5
+          = link_to 'Delete game', game_path(@game), :method => :delete
+          %br
+          = link_to 'New game', games_path 
+    
+                
+      .row
+        .span4
+          = form_tag game_path(@game), :method => :get, :class => "form" do
+            .row-fluid
+              .span6
+                .input-prepend.controls
+                  %span{:class => "add-on"}
+                    ="+"
+                  = text_field :chain, :chain_to_keep, :value => params[:chain_to_keep], :autofocus => true, :placeholder => "Letters to keep", :class=> "input-large"              
+               
+                .input-prepend.controls.controls-row               
+                  %span{:class => "add-on"}
+                    ="-"
+                  = text_field :chain, :chain_to_remove, :value => params[:chain_to_remove], :autofocus => true, :placeholder => "Unwanted letters", :class=> "input-large"
+            .row-fluid
+              .span6
+                = submit_tag 'Sort', :class => "btn btn-large btn-primary"
+              .span6
+                %input(type="reset"){:class => "btn"}
+                
+      .row
+        .span4
+          .accordion#accordion-words
+            - cpt = 0
+            - @words.each do |word|
+              -cpt += 1
+              .accordion-group
+                .accordion-heading
+                  %a{:class => "accordion-toggle", :data => {:toggle => "collapse",:parent => "accordion-words"}, :href => "#collapsewords#{cpt}"}
+                    = word
+                %div{:class => "accordion-body collapse", :id => "collapsewords#{cpt}"}
+                  .accordion-inner
+                    %h3
+                      = word
+                    = link_to "Play !", move_word_game_path(@game, :word => word), :method => :put
+    .span4
+      .row
+        .span4
+          %h2 Words played
+      .row
+        .span4
+          .accordion#accordion-played
+            - cpt = 0
+            - @played.each do |word|
+              -cpt += 1
+              .accordion-group
+                .accordion-heading
+                  %a{:class => "accordion-toggle", :data => {:toggle => "collapse",:parent => "accordion-played"}, :href => "#collapseplayed#{cpt}"}
+                    = word
+                %div{:class => "accordion-body collapse", :id => "collapseplayed#{cpt}"}
+                  .accordion-inner
+                    %h3
+                      = word
+                    = link_to "Unplay", move_word_game_path(@game, :word => word), :method => :put

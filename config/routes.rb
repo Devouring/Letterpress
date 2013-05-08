@@ -12,7 +12,11 @@ App::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :games
+  resources :games do
+    member do
+      put "move_word"  
+    end
+  end
   resources :words do
     collection do
       post 'generate'

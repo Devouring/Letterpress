@@ -1,18 +1,35 @@
-%h1 All words
-
-= link_to 'Add a new word', new_word_path
-= link_to 'Generate words', generate_words_path, :method => :post
-= link_to 'Remove duplicate words', remove_duplicate_words_path, :method => :post
-- if params[:showPrev]
-  = link_to "prev", words_path, :offset => params[:offset] - 50
-- if params[:showNext]
-  = link_to "next", words_path, :offset => params[:offset] + 50
-%ul
-  -@words.each do |word|
-    %li 
-      = link_to word.text, word_path(word)
-      = link_to 'delete', word_path(word), :method => :delete
-- if params[:showPrev]
-  = link_to "prev", words_path, :offset => params[:offset] - 50
-- if params[:showNext]
-  = link_to "next", words_path, :offset => params[:offset] + 50
+%article
+  .row
+    .span4
+      .row
+        .span4
+          %h2 All Words
+      .row  
+        .span4
+          = link_to 'Generate words', generate_words_path, :method => :post
+          = link_to 'Remove duplicate words', remove_duplicate_words_path, :method => :post
+      .row  
+        .span4
+          - if params[:showPrev]
+            = link_to "prev", words_path, :offset => params[:offset] - 50
+          - if params[:showNext]
+            = link_to "next", words_path, :offset => params[:offset] + 50
+          %ul
+            -@words.each do |word|
+              %li 
+                = link_to word.text, word_path(word)
+                = link_to 'delete', word_path(word), :method => :delete
+          - if params[:showPrev]
+            = link_to "prev", words_path, :offset => params[:offset] - 50
+          - if params[:showNext]
+            = link_to "next", words_path, :offset => params[:offset] + 50
+    .span4    
+      %h2 Add New Word
+      = form_tag words_path do
+        .row
+          .span4
+            = text_field :word, :text, :class => "input", :autofocus => true, :placeholder => "New word", :class=> "input-large"  
+        .row
+          .span4
+            = submit_tag "Add word", :class => "btn btn-large btn-primary"
+      

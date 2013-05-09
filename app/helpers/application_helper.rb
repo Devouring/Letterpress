@@ -9,13 +9,13 @@ module ApplicationHelper
     end
     return letter_hash
   end
-  
+
   def read_file
-    file = File.new(Rails.root.join('app/assets/files/wordsEn.txt'), "r")
+    file = File.new(Rails.root.join('app/assets/files/betterList.txt'), "r")
     while (line = file.gets)
-     yield line.gsub(/\W+/, '').downcase
+        yield line.gsub(/\W+/, '').downcase
     end
     file.close
-  end  
+  end
 end
 

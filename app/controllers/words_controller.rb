@@ -32,8 +32,12 @@ class WordsController < ApplicationController
     duplicate = 0
     added = 0
     read_file do |word|
-      unless Word.exists?(:text => word) then
-        Word.create!(:text => word, :letter_hash => generate_hash(word))
+      unless word.length < 3 or Word.exists?(:text => word) then
+        begin
+          Word.create!(:text => word, :letter_hash => generate_hash(word))
+        rescue ActiveRecord::RecordInvalid => e
+          puts e
+        end
       added += 1
       else
       duplicate += 1
@@ -47,14 +51,21 @@ class WordsController < ApplicationController
     cpt = 0
     word_hash = Hash.new
     Word.all.each do |word|
-      if word_hash[word.text.to_sym] == nil
+      if word.text.length > 2 and word_hash[word.text.to_sym] == nil 
         word_hash[word.text.to_sym] = 1
       else
         word.destroy
         cpt += 1
       end
     end
-    flash[:notice] = "#{cpt} words deleted"
+    cpt2 = 0
+    WordGameLink.all.each do |element|
+      if element.game == nil or element.word == nil
+        element.destroy
+        cpt += 1
+      end
+    end
+    flash[:notice] = "#{cpt} words deleted and #{cpt2} links removed"
     redirect_to words_path
   end
 

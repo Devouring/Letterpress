@@ -1,4 +1,32 @@
-ul
-{
-    list-style-type: none;
+ul {
+	list-style-type:none;
+}
+#overlay {
+	background-color:#ffffff;
+	color:#333333;
+	position:fixed;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	z-index:9999;
+}
+.tile {
+	background:none repeat scroll 0 0 yellow;
+	font-family:msr500;
+	font-size:24pt;
+	height:50px;
+	line-height:50px;
+	position:absolute;
+	text-align:center;
+	width:50px;
+	z-index:1;
+}
+#container {
+	position:relative;
+	height:250px;
+	width:250px;
+}
+.game_action {
+	text-align:right;
 }

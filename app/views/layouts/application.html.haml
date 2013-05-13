@@ -15,8 +15,14 @@
               = link_to "Letterpress Solver", games_path(), :class => "brand"
               %ul{:class => "nav"}
                 %li= link_to 'Games', games_path()
-                %li= link_to 'Words', words_path() 
-    
+                %li= link_to 'Words', words_path()
+                %li 
+                  - flash.each do |name, msg|
+                    %div{:id => "#{name}"}
+                      = msg 
+                    - if user_signed_in?
+                      = link_to('Logout', destroy_user_session_path, :method=>'delete')
+      
 - if flash[:notice]
   .row
     .span9.offset3  

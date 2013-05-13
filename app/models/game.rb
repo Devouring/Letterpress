@@ -42,7 +42,7 @@ class Game < ActiveRecord::Base
     subchain_hash = generate_hash(subchain)
     word_list = Array.new
     self.word_game_links.each do |link_word|
-      if not link_word.played then
+      if not link_word.played and link.word != nil then
         if contain(link_word.word.letter_hash, subchain_hash) then word_list << link_word.word.text end
       end
     end

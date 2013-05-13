@@ -9,6 +9,8 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 gem 'foreigner'
+gem 'newrelic_rpm'
+
 group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem "seed_dump", "~> 0.4.2"

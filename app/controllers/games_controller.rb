@@ -1,4 +1,5 @@
 class GamesController < ApplicationController
+  load_and_authorize_resource
   def show
     id = params[:id] # retrieve movie ID from URI route
     game = Game.find(params[:id]) # look up movie by unique ID

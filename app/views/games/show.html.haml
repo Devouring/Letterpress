@@ -15,7 +15,7 @@
                 = link_to game.title, game_path(game)
     .span4
       .row-fluid        
-        .span7
+        .span12
           #container
             -x = 0
             -y = 0 
@@ -26,9 +26,10 @@
               -if x == 250 then
                 -x = 0
                 -y += 50
-          %br
-        .span5
-          .game_action
+          
+      .row-fluid
+        .span12
+          .text-left
             = link_to 'Delete game', game_path(@game), :method => :delete
             %br
             = link_to 'New game', games_path 

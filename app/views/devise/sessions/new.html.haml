@@ -1,16 +1,30 @@
-%h2 Sign in
-= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-  %div
-    = f.label :email
-    %br/
-    = f.email_field :email, :autofocus => true
-  %div
-    = f.label :password
-    %br/
-    = f.password_field :password
-  - if devise_mapping.rememberable?
-    %div
-      = f.check_box :remember_me
-      = f.label :remember_me
-  %div= f.submit "Sign in"
-= render "devise/shared/links"
+.container
+  .row-fluid
+    .span4.offset4
+      %h2 Sign in
+  
+  .row-fluid
+    .span4.offset4
+      = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+        .row-fluid
+          .span6.text-right
+            = f.label :email
+          .span6  
+            = f.email_field :email, :autofocus => true
+        .row-fluid
+          .span6.text-right
+            = f.label :password, :class => 'control-label'
+          .span6  
+            = f.password_field :password, :class => 'controls'
+        - if devise_mapping.rememberable?
+          .row-fluid
+            .span6.text-right
+              = f.check_box :remember_me
+            .span6
+              = f.label :remember_me
+          .row-fluid
+            .span12.text-center
+              = f.submit "Sign in", {:class => "btn btn-primary btn-large"}
+          .row-fluid
+            .span12.text-center
+              = render "devise/shared/links"

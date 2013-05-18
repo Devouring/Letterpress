@@ -16,13 +16,19 @@
               %ul{:class => "nav"}
                 %li= link_to 'Games', games_path()
                 %li= link_to 'Words', words_path()
-                %li 
-                  - flash.each do |name, msg|
-                    %div{:id => "#{name}"}
-                      = msg 
-                    - if user_signed_in?
-                      = link_to('Logout', destroy_user_session_path, :method=>'delete')
-      
+              %ul{:class => "nav pull-right"}                      
+                - if user_signed_in?
+                  %li
+                    = link_to "My Profile", user_root_path
+                  %li
+                    = link_to 'Logout', destroy_user_session_path, :method=>'delete'
+                - else
+                  %li
+                    = link_to 'Login', new_user_session_path
+                  %li
+                    = link_to 'Register', new_user_registration_path
+                  
+    
 - if flash[:notice]
   .row
     .span9.offset3  

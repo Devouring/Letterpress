@@ -1,19 +1,20 @@
 class Game < ActiveRecord::Base
   include ApplicationHelper
-  attr_accessible :title
-  attr_accessible :title_ordered
-  attr_accessible :words
-  attr_accessible :word_game_links
+  attr_accessible :title, :title_ordered, :words
+  serialize :words, Array
+  validates :title, inclusion: { in: 'a' ..'z' }
+  validates :title, length: { minimum: 25, maximum: 25 }
+  #
+  #find the words for the current game
+  def find_all
+    self.words = Array.new
+    Word.get_ids_for_letters(self.title){|id| self.words << id} 
+  end
 
-  has_many :word_game_links
-  has_many :words, :through => :word_game_links
-  def find
-    good_words = Array.new
-    title_hash = generate_hash(self.title)
-    Word.all.each do |word|
-      if contain(title_hash, word.letter_hash) then good_words << word end
-    end
-    self.words = good_words
+  def find(first, max)
+    list_of_words = Array.new
+    Word.get_words_by_ids(self.words[first..max]){|word| list_of_words << word[0]}
+    return list_of_words
   end
 
   def contain(a, b)
@@ -28,14 +29,6 @@ class Game < ActiveRecord::Base
     @words_list.each do |word|
       if word.text.include_chain(subchain) then word_from_subchain << word end
     end
-  end
-
-  def get_words_played_sorted
-    word_list = Array.new
-    self.word_game_links.each do |link_word|
-      if link_word.played then word_list << link_word.word.text end
-    end
-    word_list.sort_by{|x| x.length}.reverse
   end
 
   def get_words_sorted(subchain)

@@ -1,14 +1,12 @@
 class GamesController < ApplicationController
   load_and_authorize_resource
   def show
-    id = params[:id] # retrieve movie ID from URI route
-    game = Game.find(params[:id]) # look up movie by unique ID
-   # game.find_words
+    game = Game.find(params[:id])
     params[:chain_to_keep] = params[:chain] == nil ? "" : params[:chain][:chain_to_keep].downcase
-    @words = game.get_words_sorted(params[:chain_to_keep]) 
     @game = game
     @games = Game.order("updated_at").reverse
-    @played = game.get_words_played_sorted
+    @words = game.find(0, 50)
+    @played = Array.new
     game.touch
     # will render app/views/movies/show.<extension> by default
   end
@@ -23,7 +21,7 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.create!(:title => params[:game][:title].downcase, :title_ordered => params[:game][:title].chars.sort.join.downcase)
-    @game.find
+    @game.find_all
     @game.save
     flash[:notice] = "#{@game.title} was successfully created."
     redirect_to game_path(@game)

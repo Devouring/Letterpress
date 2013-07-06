@@ -1,11 +1,14 @@
 class GamesController < ApplicationController
   load_and_authorize_resource
+
   def show
     game = Game.find(params[:id])
     params[:chain_to_keep] = params[:chain] == nil ? "" : params[:chain][:chain_to_keep].downcase
+    params[:chain_to_remove] = params[:chain] == nil ? "" : params[:chain][:chain_to_remove].downcase
+
     @game = game
     @games = Game.order("updated_at").reverse
-    @words = game.find(0, 50)
+    @words = game.find(0, 50, params[:chain_to_keep], params[:chain_to_remove])
     @played = Array.new
     game.touch
     # will render app/views/movies/show.<extension> by default
@@ -40,9 +43,10 @@ class GamesController < ApplicationController
     flash[:notice] = "Game '#{@game.title}' deleted."
     redirect_to games_path
   end
+
   def move_word
     @game = Game.find(params[:id])
-    @word = Word.where(:text => params[:word])
+    params[:word]
     link = WordGameLink.where(:word_id => @word, :game_id => @game).first
     link.play
     link.save

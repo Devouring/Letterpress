@@ -9,7 +9,7 @@ class GamesController < ApplicationController
     @game = game
     @games = Game.order("updated_at").reverse
     @words = game.find(0, 50, params[:chain_to_keep], params[:chain_to_remove])
-    @played = Array.new
+    @played = game.get_played_words
     game.touch
     # will render app/views/movies/show.<extension> by default
   end
@@ -46,10 +46,12 @@ class GamesController < ApplicationController
 
   def move_word
     @game = Game.find(params[:id])
-    params[:word]
-    link = WordGameLink.where(:word_id => @word, :game_id => @game).first
-    link.play
-    link.save
+    if params[:word] != nil and params[:word].length > 0
+      @game.play params[:word]
+    else
+      @game.unplay params[:played]
+    end
+    @game.save
     redirect_to game_path(@game)
   end
 end

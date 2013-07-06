@@ -15,3 +15,6 @@
 -
 */.DS_Store
 *.DS_Store
+log/development.log
+log/newrelic_agent.log
+tmp

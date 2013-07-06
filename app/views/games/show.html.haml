@@ -88,4 +88,4 @@
                   .accordion-inner
                     %h3
                       = word
-                    = link_to "Unplay", move_word_game_path(@game, :word => word), :method => :put
+                    = link_to "Unplay", move_word_game_path(@game, :played => word), :method => :put

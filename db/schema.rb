@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130626195913) do
+ActiveRecord::Schema.define(:version => 20130706175110) do
 
   create_table "games", :force => true do |t|
     t.string   "title"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20130626195913) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "words"
+    t.text     "played"
   end
 
   create_table "posts", :force => true do |t|

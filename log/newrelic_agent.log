@@ -779,3 +779,161 @@
 [06/30/13 19:23:59 +0200 saasbook (7887)] INFO : Installing Rails 3 Controller instrumentation
 [06/30/13 19:23:59 +0200 saasbook (7887)] INFO : Installing Rails 3.1/3.2 view instrumentation
 [06/30/13 19:23:59 +0200 saasbook (7887)] INFO : Finished instrumentation
+[07/02/13 23:44:09 +0200 saasbook (2666)] INFO : Starting the New Relic agent in "development" environment.
+[07/02/13 23:44:09 +0200 saasbook (2666)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[07/02/13 23:44:09 +0200 saasbook (2666)] INFO : Reading configuration from config/newrelic.yml
+[07/02/13 23:44:09 +0200 saasbook (2666)] INFO : Environment: development
+[07/02/13 23:44:09 +0200 saasbook (2666)] INFO : No known dispatcher detected.
+[07/02/13 23:44:09 +0200 saasbook (2666)] INFO : Application: My Application
+[07/02/13 23:44:09 +0200 saasbook (2666)] WARN : Agent configured not to send data in this environment.
+[07/02/13 23:44:09 +0200 saasbook (2666)] INFO : Installing Net instrumentation
+[07/02/13 23:44:09 +0200 saasbook (2666)] INFO : Installing ActiveRecord instrumentation
+[07/02/13 23:44:09 +0200 saasbook (2666)] INFO : Installing Rails3 Error instrumentation
+[07/02/13 23:44:09 +0200 saasbook (2666)] INFO : Installing Rails 3 Controller instrumentation
+[07/02/13 23:44:09 +0200 saasbook (2666)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/02/13 23:44:10 +0200 saasbook (2666)] INFO : Finished instrumentation
+[07/06/13 13:47:37 +0200 saasbook (26978)] INFO : Starting the New Relic agent in "development" environment.
+[07/06/13 13:47:37 +0200 saasbook (26978)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[07/06/13 13:47:37 +0200 saasbook (26978)] INFO : Reading configuration from config/newrelic.yml
+[07/06/13 13:47:37 +0200 saasbook (26997)] INFO : Starting the New Relic agent in "development" environment.
+[07/06/13 13:47:37 +0200 saasbook (26997)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[07/06/13 13:47:37 +0200 saasbook (26997)] INFO : Reading configuration from config/newrelic.yml
+[07/06/13 13:47:37 +0200 saasbook (26988)] INFO : Starting the New Relic agent in "development" environment.
+[07/06/13 13:47:37 +0200 saasbook (26988)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[07/06/13 13:47:37 +0200 saasbook (26988)] INFO : Reading configuration from config/newrelic.yml
+[07/06/13 13:47:37 +0200 saasbook (26978)] INFO : Environment: development
+[07/06/13 13:47:37 +0200 saasbook (26978)] INFO : No known dispatcher detected.
+[07/06/13 13:47:37 +0200 saasbook (26978)] INFO : Application: My Application
+[07/06/13 13:47:37 +0200 saasbook (26978)] WARN : Agent configured not to send data in this environment.
+[07/06/13 13:47:37 +0200 saasbook (26997)] INFO : Environment: development
+[07/06/13 13:47:37 +0200 saasbook (26997)] INFO : Dispatcher: webrick
+[07/06/13 13:47:37 +0200 saasbook (26997)] INFO : Application: My Application
+[07/06/13 13:47:37 +0200 saasbook (26997)] WARN : Agent configured not to send data in this environment.
+[07/06/13 13:47:37 +0200 saasbook (26988)] INFO : Environment: development
+[07/06/13 13:47:37 +0200 saasbook (26988)] INFO : Dispatcher: webrick
+[07/06/13 13:47:37 +0200 saasbook (26988)] INFO : Application: My Application
+[07/06/13 13:47:37 +0200 saasbook (26988)] WARN : Agent configured not to send data in this environment.
+[07/06/13 13:47:38 +0200 saasbook (26997)] INFO : Installing Net instrumentation
+[07/06/13 13:47:38 +0200 saasbook (26988)] INFO : Installing Net instrumentation
+[07/06/13 13:47:38 +0200 saasbook (26978)] INFO : Installing Net instrumentation
+[07/06/13 13:47:39 +0200 saasbook (26988)] INFO : Installing ActiveRecord instrumentation
+[07/06/13 13:47:39 +0200 saasbook (26988)] INFO : Installing Rails3 Error instrumentation
+[07/06/13 13:47:39 +0200 saasbook (26988)] INFO : Installing Rails 3 Controller instrumentation
+[07/06/13 13:47:39 +0200 saasbook (26988)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/06/13 13:47:39 +0200 saasbook (26978)] INFO : Installing ActiveRecord instrumentation
+[07/06/13 13:47:39 +0200 saasbook (26978)] INFO : Installing Rails3 Error instrumentation
+[07/06/13 13:47:39 +0200 saasbook (26978)] INFO : Installing Rails 3 Controller instrumentation
+[07/06/13 13:47:39 +0200 saasbook (26978)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/06/13 13:47:39 +0200 saasbook (26997)] INFO : Installing ActiveRecord instrumentation
+[07/06/13 13:47:39 +0200 saasbook (26997)] INFO : Installing Rails3 Error instrumentation
+[07/06/13 13:47:39 +0200 saasbook (26997)] INFO : Installing Rails 3 Controller instrumentation
+[07/06/13 13:47:39 +0200 saasbook (26997)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/06/13 13:47:39 +0200 saasbook (26978)] INFO : Finished instrumentation
+[07/06/13 13:47:39 +0200 saasbook (26997)] INFO : Finished instrumentation
+[07/06/13 13:47:39 +0200 saasbook (26988)] INFO : Finished instrumentation
+[07/06/13 17:32:57 +0200 saasbook (11359)] INFO : Starting the New Relic agent in "development" environment.
+[07/06/13 17:32:57 +0200 saasbook (11359)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[07/06/13 17:32:57 +0200 saasbook (11359)] INFO : Reading configuration from config/newrelic.yml
+[07/06/13 17:32:57 +0200 saasbook (11359)] INFO : Environment: development
+[07/06/13 17:32:57 +0200 saasbook (11359)] INFO : Dispatcher: webrick
+[07/06/13 17:32:57 +0200 saasbook (11359)] INFO : Application: My Application
+[07/06/13 17:32:57 +0200 saasbook (11359)] WARN : Agent configured not to send data in this environment.
+[07/06/13 17:32:57 +0200 saasbook (11359)] INFO : Installing Net instrumentation
+[07/06/13 17:32:57 +0200 saasbook (11359)] INFO : Installing ActiveRecord instrumentation
+[07/06/13 17:32:57 +0200 saasbook (11359)] INFO : Installing Rails3 Error instrumentation
+[07/06/13 17:32:57 +0200 saasbook (11359)] INFO : Installing Rails 3 Controller instrumentation
+[07/06/13 17:32:57 +0200 saasbook (11359)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/06/13 17:32:57 +0200 saasbook (11359)] INFO : Finished instrumentation
+[07/06/13 18:11:35 +0200 saasbook (11530)] INFO : Starting the New Relic agent in "development" environment.
+[07/06/13 18:11:35 +0200 saasbook (11530)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[07/06/13 18:11:35 +0200 saasbook (11530)] INFO : Reading configuration from config/newrelic.yml
+[07/06/13 18:11:35 +0200 saasbook (11530)] INFO : Environment: development
+[07/06/13 18:11:35 +0200 saasbook (11530)] INFO : Dispatcher: webrick
+[07/06/13 18:11:35 +0200 saasbook (11530)] INFO : Application: My Application
+[07/06/13 18:11:35 +0200 saasbook (11530)] WARN : Agent configured not to send data in this environment.
+[07/06/13 18:11:35 +0200 saasbook (11530)] INFO : Installing Net instrumentation
+[07/06/13 18:11:35 +0200 saasbook (11530)] INFO : Installing ActiveRecord instrumentation
+[07/06/13 18:11:35 +0200 saasbook (11530)] INFO : Installing Rails3 Error instrumentation
+[07/06/13 18:11:35 +0200 saasbook (11530)] INFO : Installing Rails 3 Controller instrumentation
+[07/06/13 18:11:35 +0200 saasbook (11530)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/06/13 18:11:35 +0200 saasbook (11530)] INFO : Finished instrumentation
+[07/06/13 18:12:25 +0200 saasbook (11553)] INFO : Starting the New Relic agent in "development" environment.
+[07/06/13 18:12:25 +0200 saasbook (11553)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[07/06/13 18:12:25 +0200 saasbook (11553)] INFO : Reading configuration from config/newrelic.yml
+[07/06/13 18:12:25 +0200 saasbook (11553)] INFO : Environment: development
+[07/06/13 18:12:25 +0200 saasbook (11553)] INFO : Dispatcher: webrick
+[07/06/13 18:12:25 +0200 saasbook (11553)] INFO : Application: My Application
+[07/06/13 18:12:25 +0200 saasbook (11553)] WARN : Agent configured not to send data in this environment.
+[07/06/13 18:12:25 +0200 saasbook (11553)] INFO : Installing Net instrumentation
+[07/06/13 18:12:25 +0200 saasbook (11553)] INFO : Installing ActiveRecord instrumentation
+[07/06/13 18:12:25 +0200 saasbook (11553)] INFO : Installing Rails3 Error instrumentation
+[07/06/13 18:12:25 +0200 saasbook (11553)] INFO : Installing Rails 3 Controller instrumentation
+[07/06/13 18:12:25 +0200 saasbook (11553)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/06/13 18:12:25 +0200 saasbook (11553)] INFO : Finished instrumentation
+[07/06/13 18:13:01 +0200 saasbook (11571)] INFO : Starting the New Relic agent in "development" environment.
+[07/06/13 18:13:01 +0200 saasbook (11571)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[07/06/13 18:13:01 +0200 saasbook (11571)] INFO : Reading configuration from config/newrelic.yml
+[07/06/13 18:13:01 +0200 saasbook (11571)] INFO : Environment: development
+[07/06/13 18:13:01 +0200 saasbook (11571)] INFO : Dispatcher: webrick
+[07/06/13 18:13:01 +0200 saasbook (11571)] INFO : Application: My Application
+[07/06/13 18:13:01 +0200 saasbook (11571)] WARN : Agent configured not to send data in this environment.
+[07/06/13 18:13:01 +0200 saasbook (11571)] INFO : Installing Net instrumentation
+[07/06/13 18:13:01 +0200 saasbook (11571)] INFO : Installing ActiveRecord instrumentation
+[07/06/13 18:13:01 +0200 saasbook (11571)] INFO : Installing Rails3 Error instrumentation
+[07/06/13 18:13:01 +0200 saasbook (11571)] INFO : Installing Rails 3 Controller instrumentation
+[07/06/13 18:13:01 +0200 saasbook (11571)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/06/13 18:13:01 +0200 saasbook (11571)] INFO : Finished instrumentation
+[07/06/13 19:48:52 +0200 saasbook (13669)] INFO : Starting the New Relic agent in "development" environment.
+[07/06/13 19:48:52 +0200 saasbook (13669)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[07/06/13 19:48:52 +0200 saasbook (13669)] INFO : Reading configuration from config/newrelic.yml
+[07/06/13 19:48:52 +0200 saasbook (13669)] INFO : Environment: development
+[07/06/13 19:48:52 +0200 saasbook (13669)] INFO : Dispatcher: webrick
+[07/06/13 19:48:52 +0200 saasbook (13669)] INFO : Application: My Application
+[07/06/13 19:48:52 +0200 saasbook (13669)] WARN : Agent configured not to send data in this environment.
+[07/06/13 19:48:52 +0200 saasbook (13669)] INFO : Installing Net instrumentation
+[07/06/13 19:48:52 +0200 saasbook (13669)] INFO : Installing ActiveRecord instrumentation
+[07/06/13 19:48:52 +0200 saasbook (13669)] INFO : Installing Rails3 Error instrumentation
+[07/06/13 19:48:52 +0200 saasbook (13669)] INFO : Installing Rails 3 Controller instrumentation
+[07/06/13 19:48:52 +0200 saasbook (13669)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/06/13 19:48:52 +0200 saasbook (13669)] INFO : Finished instrumentation
+[07/06/13 19:51:10 +0200 saasbook (13795)] INFO : Starting the New Relic agent in "development" environment.
+[07/06/13 19:51:10 +0200 saasbook (13795)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[07/06/13 19:51:10 +0200 saasbook (13795)] INFO : Reading configuration from config/newrelic.yml
+[07/06/13 19:51:10 +0200 saasbook (13795)] INFO : Environment: development
+[07/06/13 19:51:10 +0200 saasbook (13795)] INFO : No known dispatcher detected.
+[07/06/13 19:51:10 +0200 saasbook (13795)] INFO : Application: My Application
+[07/06/13 19:51:10 +0200 saasbook (13795)] WARN : Agent configured not to send data in this environment.
+[07/06/13 19:51:10 +0200 saasbook (13795)] INFO : Installing Net instrumentation
+[07/06/13 19:51:10 +0200 saasbook (13795)] INFO : Installing ActiveRecord instrumentation
+[07/06/13 19:51:10 +0200 saasbook (13795)] INFO : Installing Rails3 Error instrumentation
+[07/06/13 19:51:10 +0200 saasbook (13795)] INFO : Installing Rails 3 Controller instrumentation
+[07/06/13 19:51:10 +0200 saasbook (13795)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/06/13 19:51:10 +0200 saasbook (13795)] INFO : Finished instrumentation
+[07/06/13 19:56:24 +0200 saasbook (14225)] INFO : Starting the New Relic agent in "development" environment.
+[07/06/13 19:56:24 +0200 saasbook (14225)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[07/06/13 19:56:24 +0200 saasbook (14225)] INFO : Reading configuration from config/newrelic.yml
+[07/06/13 19:56:24 +0200 saasbook (14225)] INFO : Enabling the Request Sampler.
+[07/06/13 19:56:24 +0200 saasbook (14225)] INFO : Environment: development
+[07/06/13 19:56:24 +0200 saasbook (14225)] INFO : Dispatcher: webrick
+[07/06/13 19:56:24 +0200 saasbook (14225)] INFO : Application: My Application
+[07/06/13 19:56:24 +0200 saasbook (14225)] WARN : Agent configured not to send data in this environment.
+[07/06/13 19:56:24 +0200 saasbook (14225)] INFO : Installing Net instrumentation
+[07/06/13 19:56:24 +0200 saasbook (14225)] INFO : Installing ActiveRecord instrumentation
+[07/06/13 19:56:24 +0200 saasbook (14225)] INFO : Installing Rails3 Error instrumentation
+[07/06/13 19:56:24 +0200 saasbook (14225)] INFO : Installing Rails 3 Controller instrumentation
+[07/06/13 19:56:24 +0200 saasbook (14225)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/06/13 19:56:24 +0200 saasbook (14225)] INFO : Finished instrumentation
+[07/06/13 20:06:46 +0200 saasbook (15100)] INFO : Starting the New Relic agent in "development" environment.
+[07/06/13 20:06:46 +0200 saasbook (15100)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[07/06/13 20:06:46 +0200 saasbook (15100)] INFO : Reading configuration from config/newrelic.yml
+[07/06/13 20:06:46 +0200 saasbook (15100)] INFO : Enabling the Request Sampler.
+[07/06/13 20:06:46 +0200 saasbook (15100)] INFO : Environment: development
+[07/06/13 20:06:46 +0200 saasbook (15100)] INFO : Dispatcher: webrick
+[07/06/13 20:06:46 +0200 saasbook (15100)] INFO : Application: My Application
+[07/06/13 20:06:46 +0200 saasbook (15100)] WARN : Agent configured not to send data in this environment.
+[07/06/13 20:06:46 +0200 saasbook (15100)] INFO : Installing Net instrumentation
+[07/06/13 20:06:46 +0200 saasbook (15100)] INFO : Installing ActiveRecord instrumentation
+[07/06/13 20:06:46 +0200 saasbook (15100)] INFO : Installing Rails3 Error instrumentation
+[07/06/13 20:06:46 +0200 saasbook (15100)] INFO : Installing Rails 3 Controller instrumentation
+[07/06/13 20:06:46 +0200 saasbook (15100)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/06/13 20:06:46 +0200 saasbook (15100)] INFO : Finished instrumentation

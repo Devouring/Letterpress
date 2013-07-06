@@ -1,12 +1,12 @@
 -#  This file is app/views/index.html.haml
 .article
-  .row
+  .row-fluid
     .span4
       %h2 All games
       %ul{:class => ""}
         - @games.each do |game|
           %li
-            .row-fluid
+            .row-fluid-fluid
               .span1
                 = link_to game_path(game), :method => :delete do
                   %i{:class => "icon-remove"}
@@ -16,10 +16,10 @@
       %h2 Create New Game
       
       = form_tag games_path, :class => "form" do
-        .row
+        .row-fluid
           .span4
             = text_field :game, :title, :class => "input", :autofocus => true, :placeholder => "New game", :class=> "input-large"          
-        .row
+        .row-fluid
           .span4
             = submit_tag "Add", :class => "btn btn-large btn-primary"
     

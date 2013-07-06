@@ -8,14 +8,13 @@
     = csrf_meta_tags
   %body
     %header
-      .row
+      .row-fluid
         .navbar
           .navbar-inner
             .span11.offset1
               = link_to "Letterpress Solver", games_path(), :class => "brand"
               %ul{:class => "nav"}
                 %li= link_to 'Games', games_path()
-                %li= link_to 'Words', words_path()
               %ul{:class => "nav pull-right"}                      
                 - if user_signed_in?
                   %li

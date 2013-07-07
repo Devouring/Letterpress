@@ -53,14 +53,14 @@
                 %input(type="reset"){:class => "btn"}
                 
       .row-fluid
-        .span12
+        .span8.offset2
           .accordion#accordion-words
             - cpt = 0
             - @words.each do |word|
               -cpt += 1
               .accordion-group
                 .accordion-heading
-                  %a{:class => "accordion-toggle", :data => {:toggle => "collapse",:parent => "accordion-words"}, :href => "#collapsewords#{cpt}"}
+                  %a{:class => "accordion-toggle", :data => {:toggle => "collapse",:parent => "#accordion-words"}, :href => "#collapsewords#{cpt}"}
                     = word
                 %div{:class => "accordion-body collapse", :id => "collapsewords#{cpt}"}
                   .accordion-inner
@@ -72,14 +72,14 @@
         .span12
           %h2 Words played
       .row
-        .span12
+        .span8.offset2
           .accordion#accordion-played
             - cpt = 0
             - @played.each do |word|
               -cpt += 1
               .accordion-group
                 .accordion-heading
-                  %a{:class => "accordion-toggle", :data => {:toggle => "collapse",:parent => "accordion-played"}, :href => "#collapseplayed#{cpt}"}
+                  %a{:class => "accordion-toggle", :data => {:toggle => "collapse",:parent => "#accordion-played"}, :href => "#collapseplayed#{cpt}"}
                     = word
                 %div{:class => "accordion-body collapse", :id => "collapseplayed#{cpt}"}
                   .accordion-inner

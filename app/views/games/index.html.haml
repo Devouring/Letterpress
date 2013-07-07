@@ -1,25 +1,25 @@
 -#  This file is app/views/index.html.haml
 .article
-  .row-fluid
+  .row-fluid.text-center
     .span4
-      %h2 All games
-      %ul{:class => ""}
-        - @games.each do |game|
-          %li
-            .row-fluid-fluid
-              .span1
-                = link_to game_path(game), :method => :delete do
-                  %i{:class => "icon-remove"}
-              .span11
-                = link_to game.title, game_path(game)
-    .span4    
-      %h2 Create New Game
-      
+      .row-fluid
+        .span12
+          %h2 All games
+      - @games.each do |game|
+        .row-fluid
+          .span12
+            = link_to game_path(game), :method => :delete do
+              %i{:class => "icon-remove"}
+            = link_to game.title, game_path(game)
+    .span4
+      .row-fluid
+        .span12    
+          %h2 Create New Game
       = form_tag games_path, :class => "form" do
         .row-fluid
-          .span4
+          .span12
             = text_field :game, :title, :class => "input", :autofocus => true, :placeholder => "New game", :class=> "input-large"          
         .row-fluid
-          .span4
+          .span12
             = submit_tag "Add", :class => "btn btn-large btn-primary"
     

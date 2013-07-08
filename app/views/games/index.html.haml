@@ -15,7 +15,8 @@
             - @games.each do |game|
               %tr
                 %td
-                  = link_to "Delete", game_path(game), :method => :delete do
+                  = link_to game_path(game), :method => :delete do
+                    %i{:class => "icon-remove"}
                 %td
                   = link_to game.title, game_path(game)
                 %td

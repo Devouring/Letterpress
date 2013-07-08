@@ -15,12 +15,12 @@
             - @games.each do |game|
               %tr
                 %td
-                  = link_to game_path(game), :method => :delete do
-                    %i{:class => "icon-remove"}
+                  = link_to "Delete", game_path(game), :method => :delete do
                 %td
                   = link_to game.title, game_path(game)
                 %td
                   = game.created_at.strftime("%H:%M, %d %b. %Y")
+    .span4
       .row-fluid
         .span12    
           %h2 Create New Game

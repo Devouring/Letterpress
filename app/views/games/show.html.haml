@@ -5,13 +5,22 @@
       .row-fluid
         .span12
           %h2 All games
-      
-      - @games.each do |game|
-        .row-fluid
-          .span12
-            = link_to game_path(game), :method => :delete do
-              %i{:class => "icon-remove"}
-            = link_to game.title, game_path(game)
+      .row-fluid
+        .span12
+          %table
+            %tr
+              %th.span1
+              %th.span7
+              %th.span4
+            - @games.each do |game|
+              %tr
+                %td     
+                  = link_to game_path(game), :method => :delete do
+                    %i{:class => "icon-remove"}
+                %td
+                  = link_to game.title, game_path(game)
+                %td
+                  = game.created_at.strftime("%H:%M, %d %b. %Y")
     .span4
       .row-fluid        
         .span12
@@ -26,11 +35,14 @@
                 -x = 0
                 -y += 50
           
-      .row-fluid.text-left
-        .span6
-          = link_to 'Delete game', game_path(@game), :method => :delete
-        .span6
-          = link_to 'New game', games_path 
+      .row-fluid
+        .span12
+          #subcontainer
+            .row-fluid
+              .span6.text-left
+                = link_to 'Delete game', game_path(@game), :method => :delete
+              .span6.text-right
+                = link_to 'New game', games_path 
     
                 
       .row-fluid
@@ -49,8 +61,8 @@
                   = text_field :chain, :chain_to_remove, :value => params[:chain_to_remove], :placeholder => "Unwanted letters", :class=> "input-large"
             .row-fluid
               .span12
-                = submit_tag 'Sort', :class => "btn btn-large btn-primary"
-                %input(type="reset"){:class => "btn"}
+                = submit_tag 'Sort', :class => "btn btn-large btn-primary", :value => 'action', :name => 'filter'
+                = link_to "reset", "", :onclick => "reset(); return false", :class => "btn"
                 
       .row-fluid
         .span8.offset2

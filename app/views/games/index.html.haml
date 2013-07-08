@@ -5,13 +5,22 @@
       .row-fluid
         .span12
           %h2 All games
-      - @games.each do |game|
-        .row-fluid
-          .span12
-            = link_to game_path(game), :method => :delete do
-              %i{:class => "icon-remove"}
-            = link_to game.title, game_path(game)
-    .span4
+      .row-fluid
+        .span12
+          %table
+            %tr
+              %th.span1
+              %th.span7
+              %th.span4
+            - @games.each do |game|
+              %tr
+                %td
+                  = link_to game_path(game), :method => :delete do
+                    %i{:class => "icon-remove"}
+                %td
+                  = link_to game.title, game_path(game)
+                %td
+                  = game.created_at.strftime("%H:%M, %d %b. %Y")
       .row-fluid
         .span12    
           %h2 Create New Game

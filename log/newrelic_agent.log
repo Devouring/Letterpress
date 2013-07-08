@@ -979,3 +979,31 @@
 [07/07/13 11:14:26 +0200 saasbook (8633)] INFO : Installing Rails 3 Controller instrumentation
 [07/07/13 11:14:26 +0200 saasbook (8633)] INFO : Installing Rails 3.1/3.2 view instrumentation
 [07/07/13 11:14:27 +0200 saasbook (8633)] INFO : Finished instrumentation
+[07/07/13 21:53:03 +0200 saasbook (11847)] INFO : Starting the New Relic agent in "development" environment.
+[07/07/13 21:53:03 +0200 saasbook (11847)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[07/07/13 21:53:03 +0200 saasbook (11847)] INFO : Reading configuration from config/newrelic.yml
+[07/07/13 21:53:03 +0200 saasbook (11847)] INFO : Enabling the Request Sampler.
+[07/07/13 21:53:03 +0200 saasbook (11847)] INFO : Environment: development
+[07/07/13 21:53:03 +0200 saasbook (11847)] INFO : Dispatcher: webrick
+[07/07/13 21:53:03 +0200 saasbook (11847)] INFO : Application: My Application
+[07/07/13 21:53:03 +0200 saasbook (11847)] WARN : Agent configured not to send data in this environment.
+[07/07/13 21:53:03 +0200 saasbook (11847)] INFO : Installing Net instrumentation
+[07/07/13 21:53:03 +0200 saasbook (11847)] INFO : Installing ActiveRecord instrumentation
+[07/07/13 21:53:03 +0200 saasbook (11847)] INFO : Installing Rails3 Error instrumentation
+[07/07/13 21:53:03 +0200 saasbook (11847)] INFO : Installing Rails 3 Controller instrumentation
+[07/07/13 21:53:03 +0200 saasbook (11847)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/07/13 21:53:03 +0200 saasbook (11847)] INFO : Finished instrumentation
+[07/08/13 21:25:20 +0200 saasbook (14443)] INFO : Starting the New Relic agent in "development" environment.
+[07/08/13 21:25:20 +0200 saasbook (14443)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[07/08/13 21:25:20 +0200 saasbook (14443)] INFO : Reading configuration from config/newrelic.yml
+[07/08/13 21:25:20 +0200 saasbook (14443)] INFO : Enabling the Request Sampler.
+[07/08/13 21:25:20 +0200 saasbook (14443)] INFO : Environment: development
+[07/08/13 21:25:20 +0200 saasbook (14443)] INFO : Dispatcher: webrick
+[07/08/13 21:25:20 +0200 saasbook (14443)] INFO : Application: My Application
+[07/08/13 21:25:20 +0200 saasbook (14443)] WARN : Agent configured not to send data in this environment.
+[07/08/13 21:25:20 +0200 saasbook (14443)] INFO : Installing Net instrumentation
+[07/08/13 21:25:20 +0200 saasbook (14443)] INFO : Installing ActiveRecord instrumentation
+[07/08/13 21:25:20 +0200 saasbook (14443)] INFO : Installing Rails3 Error instrumentation
+[07/08/13 21:25:20 +0200 saasbook (14443)] INFO : Installing Rails 3 Controller instrumentation
+[07/08/13 21:25:20 +0200 saasbook (14443)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/08/13 21:25:20 +0200 saasbook (14443)] INFO : Finished instrumentation

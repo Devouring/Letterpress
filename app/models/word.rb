@@ -1,6 +1,14 @@
 class Word
+  @@word_hash = nil
+  def self.get_word_hash
+    if @@word_hash == nil
+      @@word_hash = JSON.parse(IO.read(File.open("app/assets/files/word_hash.json", "r")))
+    end
+    @@word_hash 
+  end
+  
   def self.all
-    return word_hash
+    return get_word_hash
   end
 
   def self.get_words_by_ids(ids)
@@ -50,11 +58,7 @@ class Word
     File.open("app/assets/files/word_hash.json", "w") do |f|
       f.write(JSON.pretty_generate(array_of_word))
     end
-  end
-
-  def self.word_hash
-    return JSON.parse(IO.read(File.open("app/assets/files/word_hash.json", "r")))
-  end
+  end  
 
   def self.contain(word, sub_chain)
     [:e, :t, :a, :o, :i, :n, :s, :r, :h, :l, :d, :c, :u, :m, :f, :p, :g, :w, :y, :b, :v, :k, :x, :j, :q, :z].each do |letter|

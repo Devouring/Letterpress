@@ -13,7 +13,6 @@ function completeFilters(){
 
 }
 function reset(){
-	alert(' toto');
 	$('#container').children().each(function(){
 		$(this).addClass('normalTile');
 		$(this).removeClass('blueTile');

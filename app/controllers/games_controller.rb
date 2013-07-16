@@ -4,7 +4,6 @@ class GamesController < ApplicationController
   def show
     game = Game.find(params[:id])
     if params[:play]
-      flash[:notice] = " it works"
     end
     params[:chain_to_keep] = params[:chain] == nil ? "" : params[:chain][:chain_to_keep].downcase
     params[:chain_to_remove] = params[:chain] == nil ? "" : params[:chain][:chain_to_remove].downcase

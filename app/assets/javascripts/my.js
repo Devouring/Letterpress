@@ -13,6 +13,7 @@ function completeFilters(){
 
 }
 function reset(){
+	alert(' toto');
 	$('#container').children().each(function(){
 		$(this).addClass('normalTile');
 		$(this).removeClass('blueTile');
@@ -21,22 +22,28 @@ function reset(){
 	$('#chain_chain_to_keep').attr('value', '');
 	$('#chain_chain_to_remove').attr('value', '');
 }
-$(document).ready(function(){
-	$('.accordion-toggle').click(function(){
-		array_of_letters = $.trim($(this).text()).toUpperCase().split('');
-		$('#container').children().each(function(){
-			$(this).addClass('normalTile');
-			$(this).removeClass('blueTile');
-			$(this).removeClass('redTile');
-			for(i = 0 ; i < array_of_letters.length ; i ++){
-				if($.trim($(this).text()) == array_of_letters[i]){
-					$(this).addClass('blueTile');
-					$(this).removeClass('normalTile');
-					array_of_letters[i] = 0;
-					i = 50;
-				}
+function colorTiles(array_of_letters){
+	$('#container').children().each(function(){
+		$(this).addClass('normalTile');
+		$(this).removeClass('blueTile');
+		$(this).removeClass('redTile');
+		for(i = 0 ; i < array_of_letters.length ; i ++){
+			if($.trim($(this).text()) == array_of_letters[i]){
+				$(this).addClass('blueTile');
+				$(this).removeClass('normalTile');
+				array_of_letters[i] = 0;
+				i = 50;
 			}
-		});		
+		}
+	});	
+}
+$(document).ready(function(){
+	$("#resetButton").click(function(){
+		reset();
+	});
+	colorTiles($.trim($('#chain_chain_to_keep').attr('value')).toUpperCase().split(''))
+	$('.accordion-toggle').click(function(){
+		colorTiles($.trim($(this).text()).toUpperCase().split(''));			
 	});
 	$('.tile').click(function(){
 		if ( $(this).hasClass('blueTile') ){

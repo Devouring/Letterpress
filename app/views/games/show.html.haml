@@ -1,53 +1,53 @@
 -#  This file is app/views/index.html.haml
 %article
-  .row-fluid.text-center
-    .span4
-      .row-fluid
-        .span12
-          %h2 All games
-      .row-fluid
-        .span12
-          %table
-            %tr
-              %th.span1
-              %th.span7
-              %th.span4
-            - @games.each do |game|
+  = form_tag game_path(@game), :method => :get, :class => "form" do
+    .row-fluid.text-center
+      .span4
+        .row-fluid
+          .span12
+            %h2 All games
+        .row-fluid
+          .span12
+            %table
               %tr
-                %td     
-                  = link_to game_path(game), :method => :delete do
-                    %i{:class => "icon-remove"}
-                %td
-                  = link_to game.title, game_path(game)
-                %td
-                  = game.created_at.strftime("%H:%M, %d %b. %Y")
-    .span4
-      .row-fluid        
-        .span12
-          #container
-            -x = 0
-            -y = 0 
-            -@game.title.upcase.chars.each do |letter|
-              %div{:class => "normalTile tile", :style => "left: #{x}px; top: #{y}px;"} 
-                = letter
-              - x += 50
-              -if x == 250 then
-                -x = 0
-                -y += 50
-          
-      .row-fluid
-        .span12
-          #subcontainer
-            .row-fluid
-              .span6.text-left
-                = link_to 'Delete game', game_path(@game), :method => :delete
-              .span6.text-right
-                = link_to 'New game', games_path 
-    
-                
-      .row-fluid
-        .span12
-          = form_tag game_path(@game), :method => :get, :class => "form" do
+                %th.span1
+                %th.span7
+                %th.span4
+              - @games.each do |game|
+                %tr
+                  %td     
+                    = link_to game_path(game), :method => :delete do
+                      %i{:class => "icon-remove"}
+                  %td
+                    = link_to game.title, game_path(game)
+                  %td
+                    = game.created_at.strftime("%H:%M, %d %b. %Y")
+      .span4
+        .row-fluid        
+          .span12
+            #container
+              -x = 0
+              -y = 0 
+              -@game.title.upcase.chars.each do |letter|
+                %div{:class => "normalTile tile", :style => "left: #{x}px; top: #{y}px;"} 
+                  = letter
+                - x += 50
+                -if x == 250 then
+                  -x = 0
+                  -y += 50
+            
+        .row-fluid
+          .span12
+            #subcontainer
+              .row-fluid
+                .span6.text-left
+                  = link_to 'Delete game', game_path(@game), :method => :delete
+                .span6.text-right
+                  = link_to 'New game', games_path 
+      
+                  
+        .row-fluid
+          .span12
             .row-fluid
               .span12
                 .input-prepend.controls
@@ -61,40 +61,41 @@
                   = text_field :chain, :chain_to_remove, :value => params[:chain_to_remove], :placeholder => "Unwanted letters", :class=> "input-large"
             .row-fluid
               .span12
-                = submit_tag 'Sort', :class => "btn btn-large btn-primary", :value => 'action', :name => 'filter'
-                = link_to "reset", "", :onclick => "reset(); return false", :class => "btn"
-                
-      .row-fluid
-        .span8.offset2
-          .accordion#accordion-words
-            - cpt = 0
-            - @words.each do |word|
-              -cpt += 1
-              .accordion-group
-                .accordion-heading
-                  %a{:class => "accordion-toggle", :data => {:toggle => "collapse",:parent => "#accordion-words"}, :href => "#collapsewords#{cpt}"}
-                    = word
-                %div{:class => "accordion-body collapse", :id => "collapsewords#{cpt}"}
-                  .accordion-inner
-                    %h3
+                = submit_tag 'Sort', :class => "btn btn-large btn-primary"
+                %span{:class => "btn", :id => "resetButton"}
+                  Reset
+                  
+        .row-fluid
+          .span8.offset2
+            .accordion#accordion-words
+              - cpt = 0
+              - @words.each do |word|
+                -cpt += 1
+                .accordion-group
+                  .accordion-heading
+                    %a{:class => "accordion-toggle", :data => {:toggle => "collapse",:parent => "#accordion-words"}, :href => "#collapsewords#{cpt}"}
                       = word
-                    = link_to "Play !", move_word_game_path(@game, :word => word), :method => :put
-    .span4
-      .row
-        .span12
-          %h2 Words played
-      .row
-        .span8.offset2
-          .accordion#accordion-played
-            - cpt = 0
-            - @played.each do |word|
-              -cpt += 1
-              .accordion-group
-                .accordion-heading
-                  %a{:class => "accordion-toggle", :data => {:toggle => "collapse",:parent => "#accordion-played"}, :href => "#collapseplayed#{cpt}"}
-                    = word
-                %div{:class => "accordion-body collapse", :id => "collapseplayed#{cpt}"}
-                  .accordion-inner
-                    %h3
+                  %div{:class => "accordion-body collapse", :id => "collapsewords#{cpt}"}
+                    .accordion-inner
+                      %h3
+                        = word
+                      = submit_tag 'Play !', :name => "play", :class => "btn btn-info"
+      .span4
+        .row
+          .span12
+            %h2 Words played
+        .row
+          .span8.offset2
+            .accordion#accordion-played
+              - cpt = 0
+              - @played.each do |word|
+                -cpt += 1
+                .accordion-group
+                  .accordion-heading
+                    %a{:class => "accordion-toggle", :data => {:toggle => "collapse",:parent => "#accordion-played"}, :href => "#collapseplayed#{cpt}"}
                       = word
-                    = link_to "Unplay", move_word_game_path(@game, :played => word), :method => :put
+                  %div{:class => "accordion-body collapse", :id => "collapseplayed#{cpt}"}
+                    .accordion-inner
+                      %h3
+                        = word
+                      = link_to "Unplay", move_word_game_path(@game, :played => word), :method => :put

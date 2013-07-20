@@ -1,19 +1,21 @@
 class GamesController < ApplicationController
   load_and_authorize_resource
-
   def show
-    game = Game.find(params[:id])
-    if params[:play]
+    @game = Game.find(params[:id])
+    if params[:play] != nil
+      @game.play params[:chain][:word_played]
+    end
+     if params[:unplay] != nil
+      @game.unplay params[:chain][:word_played]
     end
     params[:chain_to_keep] = params[:chain] == nil ? "" : params[:chain][:chain_to_keep].downcase
     params[:chain_to_remove] = params[:chain] == nil ? "" : params[:chain][:chain_to_remove].downcase
 
-    @game = game
     @games = Game.order("updated_at").reverse
-    @words = game.find(0, 50, params[:chain_to_keep], params[:chain_to_remove])
-    @played = game.get_played_words
-    game.touch
-    # will render app/views/movies/show.<extension> by default
+    @words = @game.find(0, 50, params[:chain_to_keep], params[:chain_to_remove])
+    @played = @game.get_played_words
+    @game.save
+  # will render app/views/movies/show.<extension> by default
   end
 
   def index
@@ -46,14 +48,4 @@ class GamesController < ApplicationController
     redirect_to games_path
   end
 
-  def move_word
-    @game = Game.find(params[:id])
-    if params[:word] != nil and params[:word].length > 0
-      @game.play params[:word]
-    else
-      @game.unplay params[:played]
-    end
-    @game.save
-    redirect_to game_path(@game)
-  end
 end

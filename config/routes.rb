@@ -29,11 +29,7 @@ App::Application.routes.draw do
   end
 
   resources :posts
-  resources :games do
-    member do
-      put "move_word"
-    end
-  end
+  resources :games 
   resources :words do
     collection do
       post 'generate'

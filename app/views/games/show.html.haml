@@ -1,6 +1,7 @@
 -#  This file is app/views/index.html.haml
 %article
   = form_tag game_path(@game), :method => :get, :class => "form" do
+    = text_field :chain, :word_played, :id => 'word-to-be-played', :class=> "hide hidden"
     .row-fluid.text-center
       .span4
         .row-fluid
@@ -58,7 +59,7 @@
                 .input-prepend.controls              
                   %span{:class => "add-on"}
                     ="-"
-                  = text_field :chain, :chain_to_remove, :value => params[:chain_to_remove], :placeholder => "Unwanted letters", :class=> "input-large"
+                  = text_field :chain, :chain_to_remove, :value => params[:chain_to_remove], :placeholder => "Unwanted letters", :class=> "input-large"                  
             .row-fluid
               .span12
                 = submit_tag 'Sort', :class => "btn btn-large btn-primary"
@@ -79,7 +80,7 @@
                     .accordion-inner
                       %h3
                         = word
-                      = submit_tag 'Play !', :name => "play", :class => "btn btn-info"
+                      = submit_tag 'Play !', :name => "play", :class => "btn btn-info play", :id => word
       .span4
         .row
           .span12
@@ -98,4 +99,5 @@
                     .accordion-inner
                       %h3
                         = word
-                      = link_to "Unplay", move_word_game_path(@game, :played => word), :method => :put
+                      = submit_tag 'Unplay', :name => "unplay", :class => "btn btn-info play", :id => word
+  

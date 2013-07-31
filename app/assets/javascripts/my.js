@@ -21,6 +21,27 @@ function reset(){
 	$('#chain_chain_to_keep').attr('value', '');
 	$('#chain_chain_to_remove').attr('value', '');
 }
+
+var inputNewGame;
+function constructNewGame(){
+	var x = 0;
+	var y = 0;
+	var container = $('#container');
+	var text = $.trim(inputNewGame.val()).toUpperCase().split('');
+	var limit = 25;
+	if(text.length < limit){
+		limit = text.length;
+	}
+	for(var i = 0 ; i < limit ; i ++){
+		container.append('<div class="normalTile tile" + style="left:' 
+		+ x + 'px; top: ' + y + 'px;"> ' + text[i]+ '</div');
+		x += 50;
+		if(x == 250){
+			x = 0;
+			y += 50;
+		}		
+	}
+} 
 function colorTiles(array_of_letters){
 	$('#container').children().each(function(){
 		$(this).addClass('normalTile');
@@ -37,6 +58,11 @@ function colorTiles(array_of_letters){
 	});	
 }
 $(document).ready(function(){
+	inputNewGame = $("#new-game");
+	constructNewGame()
+	inputNewGame.keyup(function(){
+		constructNewGame();
+	});
 	$("#resetButton").click(function(){
 		reset();
 	});

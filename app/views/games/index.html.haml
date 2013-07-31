@@ -28,8 +28,13 @@
       = form_tag games_path, :class => "form" do
         .row-fluid
           .span12
-            = text_field :game, :title, :class => "input", :autofocus => true, :placeholder => "New game", :class=> "input-large"          
+            = text_field :game, :title, :class => "input input-large", :id => "new-game", :autofocus => true, :placeholder => "New game"          
         .row-fluid
           .span12
-            = submit_tag "Add", :class => "btn btn-large btn-primary"
-    
+            = submit_tag "Add", :class => "btn btn-large btn-primary" 
+    .span4
+      .row-fluid
+        .span12
+          #container         
+         
+

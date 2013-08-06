@@ -10,17 +10,8 @@
  
 @@ -13,4 +14,5 @@
  # Ignore all logfiles and tempfiles.
- /log/*.log
- /tmp
--
 */.DS_Store
 *.DS_Store
-log/development.log
-log/newrelic_agent.log
-tmp
-tmp
-tmp
-log
-tmp
-tmp
-log
+log/*
+tmp/*
+

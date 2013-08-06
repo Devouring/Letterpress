@@ -6,13 +6,13 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
 
     @games = Game.order("updated_at").reverse
-      @words = @game.find(0, 50, @@chain_to_keep, @@chain_to_remove)
-   
+    @words = @game.find(0, 50, @@chain_to_keep, @@chain_to_remove)
+
     params[:chain_to_keep] = @@chain_to_keep
     params[:chain_to_remove] = @@chain_to_remove
     @played = @game.get_played_words
 
-    @game.save
+    @game.touch
     @words.inspect
     puts @games
   # will render app/views/movies/show.<extension> by default
@@ -29,6 +29,7 @@ class GamesController < ApplicationController
   def create
     @game = Game.create!(:title => params[:game][:title].downcase, :title_ordered => params[:game][:title].chars.sort.join.downcase)
     @game.find_all
+    @game.save
     flash[:notice] = "#{@game.title} was successfully created."
     redirect_to game_path(@game)
   end

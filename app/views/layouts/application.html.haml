@@ -11,9 +11,9 @@
   %body
     %header
       .row-fluid
-        .navbar
+        .navbar.navbar-inverse
           .navbar-inner
-            .span11.offset1
+            .container
               %ul{:class => "nav navbar-nav"}
                 %li= link_to "Letterpress Solver", games_path(), :class => "brand"
                 %li= link_to 'Games', games_path()
@@ -22,7 +22,9 @@
                   %li
                     = link_to "My Profile", user_root_path
                   %li
-                    = link_to 'Logout', destroy_user_session_path, :method=>'delete'
+                    = link_to destroy_user_session_path, :method=>'delete' do
+                      Logout
+                      %i.icon-off
                 - else
                   %li
                     = link_to 'Login', new_user_session_path
@@ -31,11 +33,11 @@
                   
     
 - if flash[:notice]
-  .row
-    .span9.offset3  
+  .row-fluid
+    .span6.offset3.text-center  
       #notice.message.alert.alert-info= flash[:notice]
 - elsif flash[:warning]
-  .row
-    .span9.offset3  
+  .row-fluid
+    .span6.offset3.text-center
       #warning.message.alert.alert-warning= flash[:warning]
 = yield

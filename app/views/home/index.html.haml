@@ -1,10 +1,13 @@
-.hero-unit
-  %h1 
-    Welcome to the
-    %br 
-    Letterpress Solver.
-  - if user_signed_in?
-    =link_to 'My games', games_path
-  - else
-    = link_to 'Login', new_user_session_path, {:class => 'btn btn-primary'}
-    = link_to 'Register', new_user_registration_path, {:class => 'btn'}
+.container  
+  .jumbotron
+    %h1 
+      Welcome to the
+      %br 
+      Letterpress Genius
+    - if user_signed_in?
+      =link_to 'My games', games_path
+    - else
+      = link_to new_user_session_path, {:class => 'btn btn-primary btn-large'} do
+        %i.icon-signin
+        Login
+      = link_to 'Register', new_user_registration_path, {:class => 'btn btn-default'}

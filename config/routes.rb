@@ -29,7 +29,11 @@ App::Application.routes.draw do
   end
 
   resources :posts
-  resources :games 
+  resources :games do
+    member do
+      post 'filter'
+    end
+  end
   resources :words do
     collection do
       post 'generate'

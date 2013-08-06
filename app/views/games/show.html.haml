@@ -1,28 +1,29 @@
 -#  This file is app/views/index.html.haml
-%article
-  = form_tag game_path(@game), :method => :get, :class => "form" do
+.container
+  = form_tag filter_game_path(@game), :method => :post, :class => "form" do
     = text_field :chain, :word_played, :id => 'word-to-be-played', :class=> "hide hidden"
     .row-fluid.text-center
       .span4
-        .row-fluid
-          .span12
-            %h2 All games
-        .row-fluid
-          .span12
-            %table
-              %tr
-                %th.span1
-                %th.span7
-                %th.span4
-              - @games.each do |game|
+        -if @games != nil and @games.length != 0
+          .row-fluid
+            .span12
+              %h2 All games
+          .row-fluid
+            .span12
+              %table
                 %tr
-                  %td     
-                    = link_to game_path(game), :method => :delete do
-                      %i{:class => "icon-remove"}
-                  %td
-                    = link_to game.title, game_path(game)
-                  %td
-                    = game.created_at.strftime("%H:%M, %d %b. %Y")
+                  %th.span1
+                  %th.span7
+                  %th.span4
+                - @games.each do |game|
+                  %tr
+                    %td     
+                      = link_to game_path(game), :method => :delete do
+                        %i.icon-remove-circle.icon-2x
+                    %td
+                      = link_to game.title, game_path(game)
+                    %td
+                      = game.created_at.strftime("%H:%M, %d %b. %Y")
       .span4
         .row-fluid        
           .span12
@@ -51,19 +52,23 @@
           .span12
             .row-fluid
               .span12
-                .input-prepend.controls
-                  %span{:class => "add-on"}
-                    ="+"
-                  = text_field :chain, :chain_to_keep, :value => params[:chain_to_keep], :autofocus => true, :placeholder => "Letters to keep", :class=> "input-large"              
+                .input-group
+                  %span.input-group-addon
+                    %i.icon-plus.icon-2x
+                  = text_field :chain, :chain_to_keep, :value => params[:chain_to_keep], :autofocus => true, :placeholder => "Letters to keep", :class=> "form-control input-large"              
                 %br
-                .input-prepend.controls              
-                  %span{:class => "add-on"}
-                    ="-"
-                  = text_field :chain, :chain_to_remove, :value => params[:chain_to_remove], :placeholder => "Unwanted letters", :class=> "input-large"                  
+                .input-group              
+                  %span.input-group-addon
+                    %i.icon-minus.icon-2x
+                  = text_field :chain, :chain_to_remove, :value => params[:chain_to_remove], :placeholder => "Unwanted letters", :class=> "form-control input-large"                  
+                %br
             .row-fluid
               .span12
-                = submit_tag 'Sort', :class => "btn btn-large btn-primary"
-                %span{:class => "btn", :id => "resetButton"}
+                %button{:type => "submit", :class => "btn btn-large btn-primary"}
+                  %i.icon-cogs.icon-2x
+                  Sort
+                %span.btn.btn-default#resetButton
+                  %i.icon-eraser.icon-2x
                   Reset
                   
         .row-fluid
@@ -80,24 +85,27 @@
                     .accordion-inner
                       %h3
                         = word
-                      = submit_tag 'Play !', :name => "play", :class => "btn btn-info play", :id => word
+                      %button{:type => "submit", :name => "play", :class => "btn btn-info play", :id => word}
+                        %i.icon-gamepad
+                        Play !
       .span4
-        .row
-          .span12
-            %h2 Words played
-        .row
-          .span8.offset2
-            .accordion#accordion-played
-              - cpt = 0
-              - @played.each do |word|
-                -cpt += 1
-                .accordion-group
-                  .accordion-heading
-                    %a{:class => "accordion-toggle", :data => {:toggle => "collapse",:parent => "#accordion-played"}, :href => "#collapseplayed#{cpt}"}
-                      = word
-                  %div{:class => "accordion-body collapse", :id => "collapseplayed#{cpt}"}
-                    .accordion-inner
-                      %h3
+        -if @played != nil and @played.length != 0
+          .row
+            .span12
+              %h2 Words played
+          .row
+            .span8.offset2
+              .accordion#accordion-played
+                - cpt = 0
+                - @played.each do |word|
+                  -cpt += 1
+                  .accordion-group
+                    .accordion-heading
+                      %a{:class => "accordion-toggle", :data => {:toggle => "collapse",:parent => "#accordion-played"}, :href => "#collapseplayed#{cpt}"}
                         = word
-                      = submit_tag 'Unplay', :name => "unplay", :class => "btn btn-info play", :id => word
-  
+                    %div{:class => "accordion-body collapse", :id => "collapseplayed#{cpt}"}
+                      .accordion-inner
+                        %h3
+                          = word
+                        = submit_tag 'Unplay', :name => "unplay", :class => "btn btn-info play", :id => word
+= javascript_include_tag 'game.show.js'      

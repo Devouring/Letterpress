@@ -1,26 +1,28 @@
 -#  This file is app/views/index.html.haml
-.article
+.container
   .row-fluid.text-center
     .span4
-      .row-fluid
-        .span12
-          %h2 All games
-      .row-fluid
-        .span12
-          %table
-            %tr
-              %th.span1
-              %th.span7
-              %th.span4
-            - @games.each do |game|
+      -if @games != nil and @games.length != 0
+        .row-fluid
+          .span12
+            %h2 All games
+        .row-fluid
+          .span12
+            %table
               %tr
-                %td
-                  = link_to game_path(game), :method => :delete do
-                    %i{:class => "icon-remove"}
-                %td
-                  = link_to game.title, game_path(game)
-                %td
-                  = game.created_at.strftime("%H:%M, %d %b. %Y")
+                %th.span1
+                %th.span7
+                %th.span4
+              - @games.each do |game|
+                %tr
+                  %td
+                    = link_to game_path(game), :method => :delete do
+                      %i.icon-remove-circle.icon-2x
+
+                  %td
+                    = link_to game.title, game_path(game)
+                  %td
+                    = game.created_at.strftime("%H:%M, %d %b. %Y")
     .span4
       .row-fluid
         .span12    
@@ -28,13 +30,18 @@
       = form_tag games_path, :class => "form" do
         .row-fluid
           .span12
-            = text_field :game, :title, :class => "input input-large", :id => "new-game", :autofocus => true, :placeholder => "New game"          
+            = text_field :game, :title, :class => "input input-large text-center", :id => "new-game", :autofocus => true, :placeholder => "New game"          
         .row-fluid
           .span12
-            = submit_tag "Add", :class => "btn btn-large btn-primary" 
+        .row-fluid
+          .span12
+            %button{:type => "submit", :class => "btn btn-large btn-primary"}
+              %h2
+                %i.icon-plus
+                Add
+            
     .span4
       .row-fluid
         .span12
-          #container         
-         
-
+          #container
+= javascript_include_tag 'games.index.js'  

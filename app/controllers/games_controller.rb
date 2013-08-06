@@ -1,20 +1,20 @@
 class GamesController < ApplicationController
-  load_and_authorize_resource
+  @@chain_to_keep = ''
+  @@chain_to_remove = ''
+  before_filter :authenticate_user!
   def show
     @game = Game.find(params[:id])
-    if params[:play] != nil
-      @game.play params[:chain][:word_played]
-    end
-     if params[:unplay] != nil
-      @game.unplay params[:chain][:word_played]
-    end
-    params[:chain_to_keep] = params[:chain] == nil ? "" : params[:chain][:chain_to_keep].downcase
-    params[:chain_to_remove] = params[:chain] == nil ? "" : params[:chain][:chain_to_remove].downcase
 
     @games = Game.order("updated_at").reverse
-    @words = @game.find(0, 50, params[:chain_to_keep], params[:chain_to_remove])
+      @words = @game.find(0, 50, @@chain_to_keep, @@chain_to_remove)
+   
+    params[:chain_to_keep] = @@chain_to_keep
+    params[:chain_to_remove] = @@chain_to_remove
     @played = @game.get_played_words
+
     @game.save
+    @words.inspect
+    puts @games
   # will render app/views/movies/show.<extension> by default
   end
 
@@ -29,7 +29,6 @@ class GamesController < ApplicationController
   def create
     @game = Game.create!(:title => params[:game][:title].downcase, :title_ordered => params[:game][:title].chars.sort.join.downcase)
     @game.find_all
-    @game.save
     flash[:notice] = "#{@game.title} was successfully created."
     redirect_to game_path(@game)
   end
@@ -46,6 +45,21 @@ class GamesController < ApplicationController
     @game.destroy
     flash[:notice] = "Game '#{@game.title}' deleted."
     redirect_to games_path
+  end
+
+  def filter
+    @game = Game.find(params[:id])
+    if params[:play] != nil
+      @game.play params[:chain][:word_played]
+    end
+    if params[:unplay] != nil
+      @game.unplay params[:chain][:word_played]
+    end
+    @game.save
+
+    @@chain_to_keep = params[:chain] == nil ? "" : params[:chain][:chain_to_keep].downcase
+    @@chain_to_remove = params[:chain] == nil ? "" : params[:chain][:chain_to_remove].downcase
+    redirect_to game_path(@game)
   end
 
 end

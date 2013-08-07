@@ -1,2 +1,5 @@
-= form_for [:admin, @user], :url => admin_users_path, :html => { :class => :form } do |f|
-  = render :partial => "form", :locals => {:f => f}
+.container
+  .row
+    .span12
+      = form_for [:admin, @user], :url => admin_users_path, :html => { :class => "form-horizontal", :id => "edit_user"} do |f|
+        = render :partial => "form", :locals => {:f => f}

@@ -15,11 +15,13 @@
           .navbar-inner
             .container
               %ul{:class => "nav navbar-nav"}
-                %li= link_to "Letterpress Solver", games_path(), :class => "brand"
-                %li= link_to 'Games', games_path()
+                %li{:class => params[:navbartop] == nil ? 'active':'' + " brand"}
+                  = link_to "Letterpress Solver", root_path()
+                %li{:class => params[:navbartop] == 'games'? 'active':''}
+                  = link_to 'Games', games_path()
               %ul{:class => "nav navbar-nav pull-right"}                      
                 - if user_signed_in?
-                  %li
+                  %li{:class => params[:navbartop] == 'profile'? 'active':''}
                     = link_to "My Profile", user_root_path
                   %li
                     = link_to destroy_user_session_path, :method=>'delete' do

@@ -1,21 +1,26 @@
-%h1 Users
-%table.table.table-striped
-  %thead
-    %tr
-      %th ID
-      %th
-        = t("activerecord.attributes.user.email", :default => t("activerecord.labels.email", :default => "Email"))
-      %th Created at
-      %th Actions
-  %tbody
-    - @users.each do |user|
-      %tr
-        %td= user.id
-        %td
-          = link_to user.email, admin_user_path(user)
-        %td= user.created_at
-        %td
-          = link_to "Show", admin_user_path(user)
-          = link_to "Edit", edit_admin_user_path(user)
-          = link_to "Destroy", admin_user_path(user), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
-= link_to "New", new_admin_user_path, :class => 'btn btn-primary'
+.container
+  .row
+    .span12.text-center
+      %h1 Users
+  .row
+    .span12
+      %table.table.table-striped
+        %thead
+          %tr
+            %th ID
+            %th
+              = t("activerecord.attributes.user.email", :default => t("activerecord.labels.email", :default => "Email"))
+            %th Created at
+            %th Actions
+        %tbody
+          - @users.each do |user|
+            %tr
+              %td= user.id
+              %td
+                = link_to user.email, admin_user_path(user)
+              %td= user.created_at
+              %td
+                = link_to "Show", admin_user_path(user)
+                = link_to "Edit", edit_admin_user_path(user)
+                = link_to "Destroy", admin_user_path(user), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
+      = link_to "New", new_admin_user_path, :class => 'btn btn-primary'

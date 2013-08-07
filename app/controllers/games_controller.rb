@@ -2,19 +2,21 @@ class GamesController < ApplicationController
   @@chain_to_keep = ''
   @@chain_to_remove = ''
   before_filter :authenticate_user!
+  before_filter :set_active_menu
   def show
     @game = Game.find(params[:id])
 
-    @games = Game.order("updated_at").reverse
     @words = @game.find(0, 50, @@chain_to_keep, @@chain_to_remove)
 
     params[:chain_to_keep] = @@chain_to_keep
     params[:chain_to_remove] = @@chain_to_remove
+    @@chain_to_remove = ''
+    @@chain_to_keep = ''
     @played = @game.get_played_words
 
     @game.touch
-    @words.inspect
-    puts @games
+    @games = Game.order("updated_at").reverse
+
   # will render app/views/movies/show.<extension> by default
   end
 
@@ -61,6 +63,9 @@ class GamesController < ApplicationController
     @@chain_to_keep = params[:chain] == nil ? "" : params[:chain][:chain_to_keep].downcase
     @@chain_to_remove = params[:chain] == nil ? "" : params[:chain][:chain_to_remove].downcase
     redirect_to game_path(@game)
+  end
+  def set_active_menu
+    params[:navbartop] = 'games'
   end
 
 end

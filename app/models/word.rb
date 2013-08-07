@@ -61,12 +61,12 @@ class Word
   end  
 
   def self.contain(word, sub_chain)
-    [:e, :t, :a, :o, :i, :n, :s, :r, :h, :l, :d, :c, :u, :m, :f, :p, :g, :w, :y, :b, :v, :k, :x, :j, :q, :z].each do |letter|
-      if sub_chain[letter.to_s] != nil and (word[letter.to_s] == nil ? 0 : word[letter.to_s]) < sub_chain[letter.to_s] then
+    ['e', 't', 'a', 'o', 'i', 'n', 's', 'r', 'h', 'l', 'd', 'c', 'u', 'm', 'f', 'p', 'g', 'w', 'y', 'b', 'v', 'k', 'x', 'j', 'q', 'z'].each do |letter|
+      if sub_chain[letter] != nil and (word[letter] == nil ? 0 : word[letter]) < sub_chain[letter] then
         return false
       end
     end
-    return true
+    true
   end
 end
 

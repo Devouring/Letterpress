@@ -1,5 +1,6 @@
 class Admin::UsersController < Admin::AdminController
   load_and_authorize_resource
+  before_filter :set_active_menu
   # GET /users
   # GET /users.json
   def index
@@ -61,10 +62,10 @@ class Admin::UsersController < Admin::AdminController
   def update
     @user = User.find(params[:id])
     if params[:user][:password].blank?
-        params[:user].delete(:password)
-        params[:user].delete(:password_confirmation)
+      params[:user].delete(:password)
+      params[:user].delete(:password_confirmation)
     end
- 
+
     respond_to do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to admin_users_path, :notice => 'User was successfully updated.' }
@@ -86,5 +87,9 @@ class Admin::UsersController < Admin::AdminController
       format.html { redirect_to admin_users_url }
       format.json { head :ok }
     end
+  end
+
+  def set_active_menu
+    params[:navbartop] = 'profile'
   end
 end

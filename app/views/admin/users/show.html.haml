@@ -1,8 +1,15 @@
-%label.label
-  = t("activerecord.attributes.user.email", :default => t("activerecord.labels.email", :default => "Email"))
-  \:
-%p= @user.email
-.form-actions
-  = link_to "Back", admin_users_path, :class => 'btn'
-  = link_to "Edit", edit_admin_user_path(@user), :class => 'btn'
-  = link_to "Delete", admin_user_path(@user), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn'
+.container
+  .row
+    .span12
+      .input-group
+        .input-group-addon.input-lg
+          %i.icon-envelope.icon-2x
+        %input{:class => 'form-control input-large', :value =>  @user.email, :disabled => 'disabled'}
+      %br
+       
+  .row
+    .span12
+      .form-actions
+        = link_to "Back", admin_users_path, :class => 'btn btn-default'
+        = link_to "Edit", edit_admin_user_path(@user), :class => 'btn btn-primary'
+        = link_to "Delete", admin_user_path(@user), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn-danger btn'

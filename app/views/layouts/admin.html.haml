@@ -10,26 +10,36 @@
 
   %body
     %header
-      .row
-        .navbar
+      .row-fluid
+        .navbar.navbar-inverse
           .navbar-inner
-            .span11.offset1
-              = link_to "Letterpress Solver", games_path(), :class => "brand"
-              %ul{:class => "nav"}
-                %li= link_to 'Games', games_path()
-                %li 
-                  - flash.each do |name, msg|
-                    %div{:id => "#{name}"}
-                      = msg 
-                    - if user_signed_in?
-                      = link_to('Logout', destroy_user_session_path, :method=>'delete')
-      
+            .container
+              %ul{:class => "nav navbar-nav"}
+                %li{:class => params[:navbartop] == nil ? 'active':'' + " brand"}
+                  = link_to "Letterpress Solver", root_path()
+                %li{:class => params[:navbartop] == 'games'? 'active':''}
+                  = link_to 'Games', games_path()
+              %ul{:class => "nav navbar-nav pull-right"}                      
+                - if user_signed_in?
+                  %li{:class => params[:navbartop] == 'profile'? 'active':''}
+                    = link_to "My Profile", user_root_path
+                  %li
+                    = link_to destroy_user_session_path, :method=>'delete' do
+                      Logout
+                      %i.icon-off
+                - else
+                  %li
+                    = link_to 'Login', new_user_session_path
+                  %li
+                    = link_to 'Register', new_user_registration_path
+                  
+    
 - if flash[:notice]
-  .row
-    .span9.offset3  
-      #notice.message= flash[:notice]
+  .row-fluid
+    .span6.offset3.text-center  
+      #notice.message.alert.alert-info= flash[:notice]
 - elsif flash[:warning]
-  .row
-    .span9.offset3  
-      #warning.message= flash[:warning]
+  .row-fluid
+    .span6.offset3.text-center
+      #warning.message.alert.alert-warning= flash[:warning]
 = yield

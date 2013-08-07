@@ -5,7 +5,7 @@
       %br 
       Letterpress Genius
     - if user_signed_in?
-      =link_to 'My games', games_path
+      =link_to 'My games', games_path, {:class => 'btn btn-primary btn-large'}
     - else
       = link_to new_user_session_path, {:class => 'btn btn-primary btn-large'} do
         %i.icon-signin

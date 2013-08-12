@@ -7,16 +7,16 @@
         -if @games != nil and @games.length != 0
           .row-fluid
             .span12
-              %h2 All game       
-          - @games.each do |game|
-            .row-fluid
-              .span1.text-left     
-                = link_to game_path(game), :method => :delete do
-                  %i.icon-remove-circle.icon-2x
-              .span7.text-left
-                = link_to game.title.upcase, game_path(game)
-              .span4.text-right
-                = game.created_at.strftime("%H:%M, %d %b")
+              %h2 All game
+            %table.table.table-striped   
+              - @games.each do |game|
+                %tr
+                  %td.text-left     
+                    = link_to game_path(game), :method => :delete do
+                      %i.icon-remove-circle.icon-2x
+                    = link_to game.title.upcase, game_path(game)
+                  %td.text-right.hidden-md
+                    = game.created_at.strftime("%H:%M, %d %b")
       .span4
         .row-fluid        
           .span12

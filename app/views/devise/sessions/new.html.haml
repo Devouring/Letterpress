@@ -19,9 +19,10 @@
         - if devise_mapping.rememberable?
           .row-fluid
             .span6.text-right
-              = f.check_box :remember_me
-            .span6
               = f.label :remember_me
+            .span6
+              = f.check_box :remember_me
+            
           .row-fluid
             .span12.text-center
               = f.submit "Sign in", {:class => "btn btn-primary btn-large"}

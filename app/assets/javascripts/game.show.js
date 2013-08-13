@@ -43,7 +43,7 @@ $(document).ready(function(){
 		reset();
 	});
 	colorTiles($.trim($('#chain_chain_to_keep').attr('value')).toUpperCase().split(''))
-	$('.accordion-toggle').click(function(){
+	$('#accordion-words .accordion-toggle').click(function(){
 		colorTiles($.trim($(this).text()).toUpperCase().split(''));			
 	});
 	$('.tile').click(function(){

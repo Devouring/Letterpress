@@ -21,12 +21,7 @@
           .col-lg-8
             .input
               = f.password_field :password_confirmation, :class => 'form-control'
-        - for role in Role.find(:all)
-          .form-group
-            = f.label role.name , :class => 'col-lg-4 control-label'
-            .col-lg-8
-              .controls
-                = check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role)
+        
         .form-group
           .col-lg-4
           .col-lg-8

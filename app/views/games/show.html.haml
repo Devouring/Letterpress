@@ -2,21 +2,12 @@
 .container
   = form_tag filter_game_path(@game), :method => :post, :class => "form" do
     = text_field :chain, :word_played, :id => 'word-to-be-played', :class=> "hide hidden"
-    .row-fluid.text-center
+    .row-fluid.text-center                 
       .span4
-        -if @games != nil and @games.length != 0
-          .row-fluid
-            .span12
-              %h2 All game
-            %table.table.table-striped   
-              - @games.each do |game|
-                %tr
-                  %td.text-left     
-                    = link_to game_path(game), :method => :delete do
-                      %i.icon-remove-circle.icon-2x
-                    = link_to game.title.upcase, game_path(game)
-                  %td.text-right.hidden-md
-                    = game.created_at.strftime("%H:%M, %d %b")
+        = render 'all_games'
+
+
+
       .span4
         .row-fluid        
           .span12

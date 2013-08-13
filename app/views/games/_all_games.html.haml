@@ -1,0 +1,24 @@
+-if @games != nil and @games.length != 0
+  .row-fluid
+    .span12
+      %h2 All games
+  .row-fluid
+    .span12
+      .accordion#accordion-games
+        - cpt = 0
+        - @games.each do |game|
+          -cpt += 1
+          .accordion-group
+            .accordion-heading
+              %a{:class => "accordion-toggle", :data => {:toggle => "collapse",:parent => "#accordion-games"}, :href => "#collapsegames#{cpt}"}
+                = game.title
+            %div{:class => "accordion-body collapse", :id => "collapsegames#{cpt}"}
+              .accordion-inner
+                = link_to game_path(game), :method => :delete, :class => 'btn btn-danger' do 
+                  %i.icon-remove-circle
+                  Delete
+                = link_to game_path(game), :class => 'btn btn-info' do
+                  %i.icon-share-alt
+                  Go !
+                %br
+                = game.created_at.strftime("%H:%M, %d %b")

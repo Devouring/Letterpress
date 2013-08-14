@@ -1,7 +1,6 @@
 class Admin::AdminController < ApplicationController
   layout "admin"
   before_filter :verify_admin
-  before_filter :set_active_menu
   def verify_admin
     :authenticate_user!
     redirect_to root_url unless has_role?(current_user, 'admin')
@@ -9,9 +8,5 @@ class Admin::AdminController < ApplicationController
 
   def current_ability
     @current_ability ||= AdminAbility.new(current_user)
-  end
-
-  def set_active_menu
-    params[:navbartop] = 'profile'
   end
 end

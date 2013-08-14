@@ -2,4 +2,20 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  games:
+    title_games: "My games"
+    button_change_game: "Go !"
+    button_delete: "Delete"
+    button_add: "Add"
+    placeholder_new_game: "New game"
+    link_delete_game: "Delete game"
+    link_new_game: "New game"
+    button_sort: "Sort"
+    button_reset: "Reset"
+    button_play_word: "Play !"
+    title_words_played: "Words played"
+    button_unplay: "Words played"
+  home:
+    login: "Login"
+    register: "Register"
+    title_application: "Welcome to the %br Letterpress Genius"

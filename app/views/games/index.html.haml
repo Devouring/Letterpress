@@ -10,7 +10,7 @@
       = form_tag games_path, :class => "form" do
         .row-fluid
           .span12
-            = text_field :game, :title, :class => "input input-large text-center", :id => "new-game", :autofocus => true, :placeholder => "New game"          
+            = text_field :game, :title, :class => "input input-large text-center", :id => "new-game", :autofocus => true, :placeholder => :placeholder_new_game          
         .row-fluid
           .span12
         .row-fluid
@@ -18,7 +18,7 @@
             %button{:type => "submit", :class => "btn btn-large btn-primary"}
               %h2
                 %i.icon-plus
-                Add
+                :button_add
             
     .span4
       .row-fluid

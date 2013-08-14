@@ -16,7 +16,7 @@ gem "devise"
 gem "cancan"
 
 group :development, :test do
-  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'ruby-debug-ide'
   gem "seed_dump", "~> 0.4.2"
 end
 # Gems used only for assets and not required

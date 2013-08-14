@@ -1,13 +1,11 @@
 .container  
   .jumbotron
     %h1 
-      Welcome to the
-      %br 
-      Letterpress Genius
+      :title_application
     - if user_signed_in?
-      =link_to 'My games', games_path, {:class => 'btn btn-primary btn-large'}
+      =link_to :title_games, games_path, {:class => 'btn btn-primary btn-large'}
     - else
       = link_to new_user_session_path, {:class => 'btn btn-primary btn-large'} do
         %i.icon-signin
-        Login
-      = link_to 'Register', new_user_registration_path, {:class => 'btn btn-default'}
+        :login
+      = link_to :register, new_user_registration_path, {:class => 'btn btn-default'}

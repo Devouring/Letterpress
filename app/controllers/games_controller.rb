@@ -2,7 +2,6 @@ class GamesController < ApplicationController
   @@chain_to_keep = ''
   @@chain_to_remove = ''
   before_filter :authenticate_user!
-  before_filter :set_active_menu
   def show
     @game = Game.find(params[:id])
 
@@ -64,8 +63,4 @@ class GamesController < ApplicationController
     @@chain_to_remove = params[:chain] == nil ? "" : params[:chain][:chain_to_remove].downcase
     redirect_to game_path(@game)
   end
-  def set_active_menu
-    params[:navbartop] = 'games'
-  end
-
 end

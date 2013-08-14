@@ -1,6 +1,5 @@
 class Admin::UsersController < Admin::AdminController
   load_and_authorize_resource
-  before_filter :set_active_menu
   # GET /users
   # GET /users.json
   def index
@@ -87,9 +86,5 @@ class Admin::UsersController < Admin::AdminController
       format.html { redirect_to admin_users_url }
       format.json { head :ok }
     end
-  end
-
-  def set_active_menu
-    params[:navbartop] = 'profile'
   end
 end

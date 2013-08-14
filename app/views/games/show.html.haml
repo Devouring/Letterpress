@@ -27,9 +27,9 @@
             #subcontainer
               .row-fluid
                 .span6.text-left
-                  = link_to 'Delete game', game_path(@game), :method => :delete
+                  = link_to :link_delete_game, game_path(@game), :method => :delete
                 .span6.text-right
-                  = link_to 'New game', games_path 
+                  = link_to :link_new_game, games_path 
       
                   
         .row-fluid
@@ -50,10 +50,10 @@
               .span12
                 %button{:type => "submit", :class => "btn btn-large btn-primary"}
                   %i.icon-cogs.icon-2x
-                  Sort
+                  :button_sort
                 %span.btn.btn-default#resetButton
                   %i.icon-eraser.icon-2x
-                  Reset
+                  :button_reset
                   
         .row-fluid
           .span8.offset2
@@ -71,12 +71,12 @@
                         = word.upcase
                       %button{:type => "submit", :name => "play", :class => "btn btn-info play", :id => word}
                         %i.icon-gamepad
-                        Play !
+                        :button_play_word
       .span4
         -if @played != nil and @played.length != 0
           .row
             .span12
-              %h2 Words played
+              %h2 :title_words_played
           .row
             .span8.offset2
               .accordion#accordion-played
@@ -91,5 +91,5 @@
                       .accordion-inner
                         %h3
                           = word
-                        = submit_tag 'Unplay', :name => "unplay", :class => "btn btn-info play", :id => word
+                        = submit_tag :button_unplay, :name => "unplay", :class => "btn btn-info play", :id => word
 = javascript_include_tag 'game.show.js'      

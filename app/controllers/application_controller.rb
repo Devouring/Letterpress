@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
-  before_action :set_locale
-  before_action :set_active_menu
+  before_filter :set_locale
+  before_filter :set_active_menu
 
   protect_from_forgery
   def has_role?(current_user, role)
@@ -12,11 +12,18 @@ class ApplicationController < ActionController::Base
   end
 
   def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
+    I18n.locale = I18n.default_locale
+    debugger
   end
 
   def set_active_menu
-    params[:navbartop] = path[:controller]
+    params[:navbartop] = params[:controller]
+    logger.info params[:controller]
+  end
+
+  def extract_locale_from_tld
+    parsed_locale = request.host.split('.').last
+    I18n.available_locales.include?(parsed_locale.to_sym) ? parsed_locale  : nil
   end
 
 end

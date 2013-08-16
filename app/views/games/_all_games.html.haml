@@ -1,7 +1,7 @@
 -if @games != nil and @games.length != 0
   .row-fluid
     .span12
-      %h2 :title_games
+      %h2= t('games.title.games')
   .row-fluid
     .span12
       .accordion#accordion-games
@@ -16,9 +16,9 @@
               .accordion-inner
                 = link_to game_path(game), :method => :delete, :class => 'btn btn-danger' do 
                   %i.icon-remove-circle
-                  :button_delete
+                  = t ('games.button.delete')
                 = link_to game_path(game), :class => 'btn btn-info' do
                   %i.icon-share-alt
-                  :button_change_game
+                  = t ('games.button.change_game')
                 %br
                 = game.created_at.strftime("%H:%M, %d %b")

@@ -3,19 +3,32 @@
 
 en:
   games:
-    title_games: "My games"
-    button_change_game: "Go !"
-    button_delete: "Delete"
-    button_add: "Add"
-    placeholder_new_game: "New game"
-    link_delete_game: "Delete game"
-    link_new_game: "New game"
-    button_sort: "Sort"
-    button_reset: "Reset"
-    button_play_word: "Play !"
-    title_words_played: "Words played"
-    button_unplay: "Words played"
+    title:
+      games: "My games"
+      words_played: "Words played"
+      create: "Create new game"
+      words_played: "Words played"
+    button:
+      change_game: "Go !"
+      delete: "Delete"
+      add: "Add"
+      sort: "Sort"
+      reset: "Reset"
+      play_word: "Play !"
+      unplay: "unplay"
+    link:
+      delete_game: "Delete game"
+      new_game: "New game"
+      unwanted: "Unwanted letters"
+    placeholder:
+      new_game: "New game"
+      unwanted: "Unwanted letters"
+      wanted: "Letters to keep"
+    
   home:
+    title:
+      application: "Welcome to the Letterpress Genius"
     login: "Login"
     register: "Register"
-    title_application: "Welcome to the %br Letterpress Genius"
+    games: "My games"
+    

@@ -1,11 +1,10 @@
 .container  
   .jumbotron
-    %h1 
-      :title_application
+    %h1= t('home.title.application')
     - if user_signed_in?
-      =link_to :title_games, games_path, {:class => 'btn btn-primary btn-large'}
+      =link_to t('home.games'), games_path, {:class => 'btn btn-primary btn-large'}
     - else
       = link_to new_user_session_path, {:class => 'btn btn-primary btn-large'} do
         %i.icon-signin
-        :login
-      = link_to :register, new_user_registration_path, {:class => 'btn btn-default'}
+        = t('home.login')
+      = link_to t('home.register'), new_user_registration_path, {:class => 'btn btn-default'}

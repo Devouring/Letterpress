@@ -28,11 +28,17 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.create!(:title => params[:game][:title].downcase, :title_ordered => params[:game][:title].chars.sort.join.downcase)
-    @game.find_all
-    @game.save
-    flash[:notice] = "#{@game.title} was successfully created."
-    redirect_to game_path(@game)
+    @game = Game.create(:title => params[:game][:title].downcase, :title_ordered => params[:game][:title].chars.sort.join.downcase)
+    if @game.valid?
+      @game.find_all
+      @game.save
+      flash[:notice] = "#{@game.title} was successfully created."
+      redirect_to game_path(@game)
+    else
+      flash[:danger] = @game.errors[:title]
+      redirect_to games_path
+    end
+
   end
 
   def edit

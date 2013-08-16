@@ -21,7 +21,7 @@
                   = link_to 'Games', games_path()
               %ul{:class => "nav navbar-nav pull-right"}                      
                 - if user_signed_in?
-                  %li{:class => params[:navbartop] == 'profile'? 'active':''}
+                  %li{:class => params[:navbartop].include?('user') || params[:navbartop].include?('devise')? 'active':''}
                     = link_to "My Profile", user_root_path
                   %li
                     = link_to destroy_user_session_path, :method=>'delete' do
@@ -42,4 +42,8 @@
   .row-fluid
     .span6.offset3.text-center
       #warning.message.alert.alert-warning= flash[:warning]
+- elsif flash[:danger]
+  .row-fluid
+    .span6.offset3.text-center
+      #warning.message.alert.alert-danger= flash[:danger]
 = yield

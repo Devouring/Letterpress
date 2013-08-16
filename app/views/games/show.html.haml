@@ -5,9 +5,6 @@
     .row-fluid.text-center                 
       .span4
         = render 'all_games'
-
-
-
       .span4
         .row-fluid        
           .span12
@@ -20,18 +17,15 @@
                 - x += 50
                 -if x == 250 then
                   -x = 0
-                  -y += 50
-            
+                  -y += 50            
         .row-fluid
           .span12
             #subcontainer
               .row-fluid
                 .span6.text-left
-                  = link_to :link_delete_game, game_path(@game), :method => :delete
+                  = link_to t('games.link.delete_game'), game_path(@game), :method => :delete
                 .span6.text-right
-                  = link_to :link_new_game, games_path 
-      
-                  
+                  = link_to t('games.link.new_game'), games_path                  
         .row-fluid
           .span12
             .row-fluid
@@ -39,22 +33,21 @@
                 .input-group
                   %span.input-group-addon
                     %i.icon-plus.icon-2x
-                  = text_field :chain, :chain_to_keep, :value => params[:chain_to_keep], :autofocus => true, :placeholder => "Letters to keep", :class=> "form-control input-large"              
+                  = text_field :chain, :chain_to_keep, :value => params[:chain_to_keep], :autofocus => true, :placeholder => t('games.placeholder.wanted'), :class=> "form-control input-large"              
                 %br
                 .input-group              
                   %span.input-group-addon
                     %i.icon-minus.icon-2x
-                  = text_field :chain, :chain_to_remove, :value => params[:chain_to_remove], :placeholder => "Unwanted letters", :class=> "form-control input-large"                  
+                  = text_field :chain, :chain_to_remove, :value => params[:chain_to_remove], :placeholder => t('games.placeholder.unwanted'), :class=> "form-control input-large"                  
                 %br
             .row-fluid
               .span12
                 %button{:type => "submit", :class => "btn btn-large btn-primary"}
                   %i.icon-cogs.icon-2x
-                  :button_sort
+                  = t('games.button.sort')
                 %span.btn.btn-default#resetButton
                   %i.icon-eraser.icon-2x
-                  :button_reset
-                  
+                  = t('games.button.reset')                 
         .row-fluid
           .span8.offset2
             .accordion#accordion-words
@@ -71,12 +64,12 @@
                         = word.upcase
                       %button{:type => "submit", :name => "play", :class => "btn btn-info play", :id => word}
                         %i.icon-gamepad
-                        :button_play_word
+                        = t('games.button.play_word')
       .span4
         -if @played != nil and @played.length != 0
           .row
             .span12
-              %h2 :title_words_played
+              %h2= t('games.title.words_played')
           .row
             .span8.offset2
               .accordion#accordion-played
@@ -91,5 +84,5 @@
                       .accordion-inner
                         %h3
                           = word
-                        = submit_tag :button_unplay, :name => "unplay", :class => "btn btn-info play", :id => word
+                        = submit_tag t('games.button.unplay'), :name => "unplay", :class => "btn btn-info play", :id => word
 = javascript_include_tag 'game.show.js'      

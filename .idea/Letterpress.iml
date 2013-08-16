@@ -42,7 +42,6 @@
     <orderEntry type="library" scope="PROVIDED" name="journey (v1.0.4, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v3.0.2, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v1.8.0, ruby-1.9.2-p290) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="linecache19 (v0.5.12, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.4, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.23, ruby-1.9.2-p290) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.7.7, ruby-1.9.2-p290) [gem]" level="application" />

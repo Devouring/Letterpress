@@ -6,11 +6,11 @@
     .span4
       .row-fluid
         .span12    
-          %h2 Create New Game
+          %h2= t('games.title.create')
       = form_tag games_path, :class => "form" do
         .row-fluid
           .span12
-            = text_field :game, :title, :class => "input input-large text-center", :id => "new-game", :autofocus => true, :placeholder => :placeholder_new_game          
+            = text_field :game, :title, :class => "input input-large text-center", :id => "new-game", :autofocus => true, :placeholder => t('games.placeholder.new_game')          
         .row-fluid
           .span12
         .row-fluid
@@ -18,7 +18,7 @@
             %button{:type => "submit", :class => "btn btn-large btn-primary"}
               %h2
                 %i.icon-plus
-                :button_add
+                = t('games.button.add')
             
     .span4
       .row-fluid

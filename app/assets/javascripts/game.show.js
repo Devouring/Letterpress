@@ -61,6 +61,7 @@ $(document).ready(function(){
 			$(this).removeClass('redTile');
 		}
 		completeFilters();
+		
 	});
 	$('.play').click(function(){
 		$('#word-to-be-played').attr('value', $(this).attr('id'));

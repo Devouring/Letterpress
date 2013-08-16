@@ -3,9 +3,8 @@ class Game < ActiveRecord::Base
   attr_accessible :title, :title_ordered, :words, :played
   serialize :words, Array
   serialize :played, Array
-  validates :title, inclusion: {in: 'a' ..'z'}
+  validates :title, format: {with: /[a-zA-Z]/}
   validates :title, length: {minimum: 25, maximum: 25}
-  #
   #find the words for the current game
   def find_all
     self.words = Array.new
@@ -42,7 +41,7 @@ class Game < ActiveRecord::Base
     hash_sub_title = Word.generate_hash self.title
     ['e', 't', 'a', 'o', 'i', 'n', 's', 'r', 'h', 'l', 'd', 'c', 'u', 'm', 'f', 'p', 'g', 'w', 'y', 'b', 'v', 'k', 'x', 'j', 'q', 'z'].each do |letter|
       if hash_to_remove[letter] != nil and hash_sub_title[letter] != nil
-        hash_sub_title[letter] -= hash_to_remove[letter]
+      hash_sub_title[letter] -= hash_to_remove[letter]
       end
     end
     hash_sub_title

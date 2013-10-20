@@ -21,6 +21,7 @@ ul {
 	width: 50px;
 	z-index: 1;
 	color: rgba(0,0,0,0.85)
+	cursor: pointer;
 }
 #container, #subcontainer {
 	position: relative;

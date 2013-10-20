@@ -21,11 +21,9 @@
         .row-fluid
           .span12
             #subcontainer
-              .row-fluid
-                .span6.text-left
-                  = link_to t('games.link.delete_game'), game_path(@game), :method => :delete
-                .span6.text-right
-                  = link_to t('games.link.new_game'), games_path                  
+              = link_to t('games.link.delete_game'), game_path(@game), :method => :delete, :class => 'pull-left'
+              = link_to t('games.link.new_game'), games_path, :class => 'pull-right'
+              %br                  
         .row-fluid
           .span12
             .row-fluid
@@ -49,7 +47,7 @@
                   %i.icon-eraser.icon-2x
                   = t('games.button.reset')                 
         .row-fluid
-          .span8.offset2
+          .span12
             .accordion#accordion-words
               - cpt = 0
               - @words.each do |word|
